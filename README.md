@@ -1,6 +1,6 @@
 ## heiseUX – a Student Project
 
-This repository contains the prototypes developed for heise Online as part of a student project. The project includes the implementation of two different prototypes: **Shorts** and a **Reading Bar**.
+This repository contains the prototypes developed for heise Online as part of a student project. The project includes the implementation of two different prototypes: **Shorts** and a **Progress Bar**.
 
 ### Project Overview
 
@@ -13,8 +13,8 @@ As part of a collaborative effort with heise Online, this project aims to enhanc
 - **User-Friendly Interface**: Easily accessible and visually appealing layout.
 - **Integration with Main Articles**: Seamless transition from shorts to full articles.
 
-#### Reading Bar
-- **Progress Tracking**: Shows the user's reading progress within an article.
+#### Progress Bar
+- **Progress Tracking**: Shows the user's progress progress within an article.
 - **Navigation Aid**: Allows users to quickly jump to different sections of an article.
 - **Bookmark Option**: Allows readers to seamlessly continue reading from where they last left off.
 
@@ -29,7 +29,7 @@ To run the prototypes locally, follow these steps:
 2. Navigate to the project directory:
    ```sh 
    cd heiseux-project/heise-shorts (for shorts)
-   cd heiseux-project/leseleiste-prototyp (for rading bar)
+   cd heiseux-project/leseleiste-prototyp (for progress bar)
 
 3. Install the necessary dependencies:
    ```sh
@@ -40,4 +40,4 @@ To run the prototypes locally, follow these steps:
    npm run dev
 
 ### Usage
-After starting the development server, you can access the prototypes in your web browser at http://localhost:5173. The homepage will provide links to both the Shorts and Reading Bar prototypes.
+After starting the development server, you can access the prototypes in your web browser at http://localhost:5173. The homepage will provide links to both the Shorts and Progress Bar prototypes.
