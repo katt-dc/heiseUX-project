@@ -24,7 +24,7 @@ To run the prototypes locally, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/heiseux-project.git
+   git clone https://github.com/katt-dc/heiseUX-project.git
 
 2. Navigate to the project directory:
    ```sh 
