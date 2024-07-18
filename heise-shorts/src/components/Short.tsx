@@ -1,7 +1,7 @@
 //zeigt Sammlung an Slides an und bietet Buttons, um zwischen Slides zu navigieren
 
 import { useState } from "react";
-import ImageSlide from "./ImageSlide";
+import ImageSlide from "./slides/ImageSlide";
 import {
   AdSlideData,
   FullScreenImageSlideData,
@@ -15,12 +15,12 @@ import {
 } from "./type";
 import { motion } from "framer-motion";
 import SlidesProgressIndicator from "./SlidesProgressIndicator";
-import TextSlide from "./TextSlide";
-import FullScreenImageSlide from "./FullScreenImageSlide";
-import FullScreenImageWithTextSlide from "./FullScreenImageWithTextSlide";
-import VideoSlide from "./VideoSlide";
-import AdSlide from "./AdSlide";
-import PodcastSlide from "./PodcastSlide";
+import TextSlide from "./slides/TextSlide";
+import FullScreenImageSlide from "./slides/FullScreenImageSlide";
+import FullScreenImageWithTextSlide from "./slides/FullScreenImageWithTextSlide";
+import VideoSlide from "./slides/VideoSlide";
+import AdSlide from "./slides/AdSlide";
+import PodcastSlide from "./slides/PodcastSlide";
 
 interface ShortProps {
   slides: SlideData[];
@@ -46,6 +46,9 @@ function Short({ slides, url }: ShortProps) {
   };
 
   const currentSlide = slides[currentSlideIndex];
+  const buttonText = currentSlide.isSlideType(SlideType.PODCAST)
+    ? "zum Podcast ▶"
+    : "zum Artikel";
 
   const openLinkToArticle = (path: string) => {
     const newWindow = window.open(path, "_blank", "noopener,noreferrer");
@@ -57,7 +60,7 @@ function Short({ slides, url }: ShortProps) {
       openLinkToArticle(url);
 
   return (
-    <div className="flex items-center justify-center rounded-xl bg-heise-light-grey min-w-80 max-w-80 h-[72vh] relative">
+    <div className="flex py-8 justify-center rounded-xl bg-heise-light-grey min-w-80 max-w-80 h-[75vh] relative mt-[7.5vh]">
       {/* Content */}
       <div>
         {currentSlide.isSlideType(SlideType.IMAGE) ? (
@@ -68,6 +71,7 @@ function Short({ slides, url }: ShortProps) {
             headline={(currentSlide as TextSlideData).title}
             text={(currentSlide as TextSlideData).description}
             url={(currentSlide as TextSlideData).url}
+            textsize={(currentSlide as TextSlideData).textsize}
           />
         ) : null}
         {currentSlide.isSlideType(SlideType.IMAGE_FULLSCREEN) ? (
@@ -79,25 +83,36 @@ function Short({ slides, url }: ShortProps) {
         {currentSlide.isSlideType(SlideType.VIDEO) ? (
           <VideoSlide
             url={(currentSlide as VideoSlideData).url}
+            headline={(currentSlide as VideoSlideData).title}
             text={(currentSlide as VideoSlideData).description}
+            textsize={(currentSlide as VideoSlideData).textsize}
+            boxposition={(currentSlide as VideoSlideData).boxposition}
           />
         ) : null}
         {currentSlide.isSlideType(SlideType.TEXT_IMAGE) ? (
-          <FullScreenImageWithTextSlide 
-          url={(currentSlide as FullScreenImageWithTextSlideData).url} 
-          headline={(currentSlide as FullScreenImageWithTextSlideData).title} 
-          text={(currentSlide as FullScreenImageWithTextSlideData).description}
+          <FullScreenImageWithTextSlide
+            url={(currentSlide as FullScreenImageWithTextSlideData).url}
+            headline={(currentSlide as FullScreenImageWithTextSlideData).title}
+            text={
+              (currentSlide as FullScreenImageWithTextSlideData).description
+            }
+            textsize={
+              (currentSlide as FullScreenImageWithTextSlideData).textsize
+            }
+            boxposition={
+              (currentSlide as FullScreenImageWithTextSlideData).boxposition
+            }
           />
-          ) : null}
+        ) : null}
         {currentSlide.isSlideType(SlideType.AD) ? (
-        <AdSlide
-          url={(currentSlide as AdSlideData).imageUrl}
-          link={(currentSlide as AdSlideData).url}
+          <AdSlide
+            url={(currentSlide as AdSlideData).imageUrl}
+            link={(currentSlide as AdSlideData).url}
           />
         ) : null}
         {currentSlide.isSlideType(SlideType.PODCAST) ? (
           <PodcastSlide
-            headline={(currentSlide as PodcastSlideData).headline}
+            headline={(currentSlide as PodcastSlideData).title}
             text={(currentSlide as PodcastSlideData).text}
             imageUrl={(currentSlide as PodcastSlideData).imageUrl}
             audioUrl={(currentSlide as PodcastSlideData).audioUrl}
@@ -107,24 +122,30 @@ function Short({ slides, url }: ShortProps) {
 
       {/* Progress Indicator + Button zum Artikel*/}
       {!currentSlide.isSlideType(SlideType.AD) ? (
-        <div className="absolute bottom-5">
-          <SlidesProgressIndicator totalSlides={slides.length} currentSlide={currentSlideIndex} />
+        <div className="absolute bottom-5 z-30">
+          <SlidesProgressIndicator
+            totalSlides={slides.length}
+            currentSlide={currentSlideIndex}
+          />
           <motion.button
-              className="pt-5"
-              onClick={onClickUrl(url)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <i className="font-semibold bg-heise-white text-heise-dark-grey rounded-3xl px-3 py-1"> zum Artikel </i>
+            className="pt-5"
+            onClick={onClickUrl(url)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <div className="font-semibold bg-heise-white text-heise-dark-grey rounded-3xl w-fit h-fit py-1 px-3 flex items-center justify-center text-sm">
+              {buttonText}
+            </div>
           </motion.button>
         </div>
       ) : null}
       {/* Buttons Slides */}
-      <div className="absolute w-full">
+      <div className="absolute short__slide-buttons top-1/2">
         <motion.button
           onClick={previousSlide}
-          className={`mx-4 ${currentSlideIndex === 0 ? "invisible" : "visible"
-            }`}
+          className={`mx-4 ${
+            currentSlideIndex === 0 ? "invisible" : "visible"
+          }`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -133,8 +154,9 @@ function Short({ slides, url }: ShortProps) {
 
         <motion.button
           onClick={nextSlide}
-          className={`mx-4 ${currentSlideIndex === slides.length - 1 ? "invisible" : "visible"
-            } right-0 absolute`}
+          className={`mx-4 ${
+            currentSlideIndex === slides.length - 1 ? "invisible" : "visible"
+          } right-0 absolute`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

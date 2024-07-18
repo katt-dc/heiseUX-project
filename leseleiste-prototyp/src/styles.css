@@ -2,18 +2,39 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #232323;
+  background-color: #202020;
 }
 
 header {
-  background-color: #3b3b3b;
+  background-color: #323232;
   color: white;
-  padding: 10px 0;
-  text-align: center;
+  position: absolute;
+  width: 100%; /* Nimmt die volle Breite ein */
+  height: 60px; /* Legt die Höhe des Headers fest */
+  top: 30px; /* Positioniert den Header 15px von oben */
+  left: 0; /* Positioniert den Header ganz links */
+  border-bottom: 1px solid #575757; /* Fügt eine untere Linie hinzu */
 }
 
-header .logo {
+.logo {
   font-size: 24px;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1040px;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  text-align: -50%;
+}
+
+.App {
+  padding-top: 50px; /* Fügt einen oberen Abstand hinzu, damit der Inhalt nicht hinter dem fixierten Header verschwindet */
 }
 
 nav ul {
@@ -38,6 +59,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   color: white;
+  text-align: left;
 }
 
 .left {
@@ -46,7 +68,7 @@ main {
 }
 
 .article-add {
-  background-color: #333;
+  background-color: #323232;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -54,7 +76,7 @@ main {
 }
 
 .article-content {
-  background-color: #333;
+  background-color: #323232;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -96,6 +118,7 @@ h2 {
   margin-top: 20px;
   color: white;
 }
+
 .a-inline-table {
   width: 100%;
   overflow-x: auto;

@@ -7,13 +7,11 @@ function App() {
 
   return (
     <>
-    <div className=''>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/shorts' element={<Shorts/>}/>
       </Routes>
-    </div>
     </>
   )
 }

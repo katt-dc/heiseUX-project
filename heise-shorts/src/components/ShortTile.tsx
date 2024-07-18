@@ -1,11 +1,16 @@
 //Kleinformat eines shorts
-
-import ImageSlide from "./ImageSlide";
+import { SlideData } from "./type.tsx";
+import TyleSlide from "./TyleSlide.tsx";
 import { useParams } from "react-router-dom";
+import { TyleSlideData } from "./type.tsx";
+import { Link } from "react-router-dom";
+interface ShortTyleProps {
+  slide: SlideData;
+  shortId: string;
+  //onEnded: () => void; //Funktionsausfruf wenn slide zu Ende
+}
 
-
-
-function ShortTile() {
+function ShortTile({ slide, shortId }: ShortTyleProps) {
 
     //TODO Möglichkeit einfügen zu bestimmten shorts zu kommen
     const redirectToShort = (path: string) => {
@@ -15,16 +20,22 @@ function ShortTile() {
     const onClickRedirect = (url: string): (() => void) => () => redirectToShort(url)
 
     const {id}= useParams();
-    //const parentShortData = shortsData.find(short => short.id === id);//platzhalter zum laden von short daten aus der json
 
-    //TODO Für die ImageSlide di erste seite des shorts laden
+    const currentSlide = slide;
+    const image = (currentSlide as TyleSlideData).imageUrl || (currentSlide as TyleSlideData).url;
+    console.log((currentSlide as TyleSlideData).url);
+    console.log((currentSlide as TyleSlideData).title);
     return (
-      <div 
-      className="flex items-center justify center rounded-xl bg-heise-light-grey min-w-40 max-w-40 min-h-[36vh]"
-      onClick={onClickRedirect("/shorts")}
+      <Link 
+      className="flex items-center justify-center rounded-xl bg-heise-light-grey w-[25vh] h-[45vh] relative"
+      to={"/shorts"}
+      state={{from: shortId}}
       >
-          <ImageSlide url={"https://placehold.co/750x1334/323232/FFFFFF/png"} />
-      </div>
+        <TyleSlide
+          url={image}
+          headline={(currentSlide as TyleSlideData).title}
+        />
+      </Link>
     );
 }
   

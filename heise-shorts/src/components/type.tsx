@@ -5,7 +5,7 @@ export enum SlideType {
   TEXT = "TEXT",
   VIDEO = "VIDEO",
   PODCAST = "PODCAST",
-  AD = "AD"
+  AD = "AD",
 }
 
 export interface SlideData {
@@ -26,10 +26,17 @@ export class TextSlideData implements SlideData {
   title: string;
   description: string;
   url: string;
-  constructor(title: string, description: string, url?: string) {
+  textsize: string;
+  constructor(
+    title: string,
+    description: string,
+    url?: string,
+    textsize?: string
+  ) {
     this.title = title;
     this.description = description;
     this.url = url || "";
+    this.textsize = textsize || "base";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.TEXT;
@@ -52,10 +59,20 @@ export class FullScreenImageWithTextSlideData implements SlideData {
   url: string;
   title: string;
   description: string;
-  constructor(url: string, title: string, description: string) {
+  textsize: string;
+  boxposition: string;
+  constructor(
+    url: string,
+    title: string,
+    description: string,
+    textsize: string,
+    boxposition: string
+  ) {
     this.url = url;
     this.title = title;
     this.description = description;
+    this.textsize = textsize || "base";
+    this.boxposition = boxposition || "center";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.TEXT_IMAGE;
@@ -64,31 +81,46 @@ export class FullScreenImageWithTextSlideData implements SlideData {
 
 export class VideoSlideData implements SlideData {
   url: string;
-  description?: string;
-  constructor(url: string, description?: string) {
+  title: string;
+  description: string;
+  textsize: string;
+  boxposition: string;
+  constructor(
+    url: string,
+    title: string,
+    description: string,
+    textsize: string,
+    boxposition: string
+  ) {
     this.url = url;
+    this.title = title;
     this.description = description;
+    this.textsize = textsize || "base";
+    this.boxposition = boxposition || "center";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.VIDEO;
   }
 }
 
-
-
 export class PodcastSlideData implements SlideData {
-  headline: string;
+  title: string;
   text: string;
   imageUrl: string;
   audioUrl: string;
 
-  constructor(headline: string, text: string, imageUrl: string, audioUrl: string) {
-    this.headline = headline;
+  constructor(
+    title: string,
+    text: string,
+    imageUrl: string,
+    audioUrl: string
+  ) {
+    this.title = title;
     this.text = text;
     this.imageUrl = imageUrl;
     this.audioUrl = audioUrl;
   }
-  
+
   isSlideType(type: SlideType): boolean {
     return type === SlideType.PODCAST;
   }
@@ -107,6 +139,23 @@ export class AdSlideData implements SlideData {
     return type === SlideType.AD;
   }
 }
+export class TyleSlideData implements SlideData {
+  url: string;
+  title: string;
+  imageUrl: string;
+  constructor(
+    url: string, 
+    title: string,
+    imageUrl: string
+  ) {
+    this.url = imageUrl || "";
+    this.title = title || "" ;
+    this.imageUrl = imageUrl;
+  }
+  isSlideType(type: SlideType): boolean {
+    return type === SlideType.IMAGE_FULLSCREEN;
+  }
+}
 
 export interface Short {
   artikelLink: string;
@@ -123,6 +172,7 @@ export interface SlideItem {
     url: string;
     audioUrl: string;
     imageUrl: string;
+    textsize: string;
+    boxposition: string;
   }[];
 }
-

@@ -1,12 +1,24 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
+import Bookmarks from "./Bookmarks";
 import "./App.css";
 import "./styles.css";
+import "./bookmarks.css"; 
 import "./images/ipad-air-2024.jpg";
+import "./images/Heise_Online_Logo_2024.png";
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <header>
+        <div className="header-content">
+        
+          <div className="logo">
+            <img src="public/Heise_Online_Logo_2024.png"  alt="" style={{ width: '200px' }}/>
+          </div>
+        </div>
+      </header>
+      <Bookmarks />
       <ProgressBar />
       <div style={{ padding: "20px" }}>
         <>
@@ -17,9 +29,6 @@ const App: React.FC = () => {
           />
           <title>Artikel - Heise</title>
           <link rel="stylesheet" href="styles.css" />
-          <header>
-            <div className="logo">heise</div>
-          </header>
           <main>
             <article className="article-content">
               <nav>
@@ -56,13 +65,16 @@ const App: React.FC = () => {
               <div className="left">
                 {/* Apple Artikel */}
                 <h1>Apple iPad Air 2024 im Test: Das bezahlbare Pro</h1>
+                <div className="chapter">
                 <p>
                   An Bord hat das neue iPad Air einige Features der teuren
                   Pro-Modelle. Wir klären, für wen angesichts der
                   Preisunterschiede ein Air das bessere Pro ist.
                 </p>
                 {/* Bild */}
-                <img src="images/ipad-air-2024.jpg" alt="Apple iPad Air 2024" />
+                <div className="chapterImage">
+                <img src="public/ipad-air-2024.jpg" alt="Apple iPad Air 2024" />
+                </div>
                 <p className="author">Von Autor Name | Datum</p>
                 <p>
                   Traditionell kombiniert Apple im iPad Air viele Komponenten
@@ -84,7 +96,9 @@ const App: React.FC = () => {
                   GByte verdoppelt und bei allen Airs die Frontkamera auf die
                   längere Seite verlegt.
                 </p>
+                </div>
                 <h2>Tastatur und Hülle</h2>
+                <div className="chapter">
                 <p>
                   Das vom iPad Pro 12,9″ bekannte Magic Keyboard für nun 399
                   Euro passt auch am iPad Air 13″. Es besteht aus Kunststoff und
@@ -112,7 +126,9 @@ const App: React.FC = () => {
                   13-Zoll-Modell verlangt Apple 119 Euro, für das mit 11 Zoll 89
                   Euro.
                 </p>
+                </div>
                 <h2>Herkömmliches IPS-Display</h2>
+                <div className="chapter">
                 <p>
                   Anders als den iPad Pros hat Apple den neuen Airs kein
                   OLED-Display spendiert. Zum Einsatz kommen wie bisher
@@ -146,7 +162,9 @@ const App: React.FC = () => {
                   "nur" 60 Hertz. Wer von einem iPad Pro kommt, dürfte das als
                   Rückschritt empfinden.
                 </p>
+                </div>
                 <h2>Fazit</h2>
+                <div className="chapter">
                 <p>
                   Klar ist der M2 besser als der M1 und der neue Pencil Pro
                   macht das künstlerische Malen und Zeichnen noch ähnlicher zum
@@ -174,7 +192,9 @@ const App: React.FC = () => {
                   Preis-Leistungsverhältnis und sinnvolle Kreativ-Features wie
                   den neuen Pencil Pro.
                 </p>
+                </div>
                 <h2>Testtabelle</h2>
+                <div className="chapterTable">
                 {/* Tabelle */}
                 <section
                   id="myTable"
@@ -602,14 +622,18 @@ const App: React.FC = () => {
                     </tbody>
                   </table>
                 </section>
+                </div>
                 {/* Neuer Artikel */}
                 <h2>Interaktive Grafiken</h2>
+                <div className="chapter">
                 <p>
                   Firmen suchen händeringend nach IT-Admins. Sie sind der
                   Grundstein für eine gute technische Infrastruktur. Wir zeigen,
                   was Administratoren verdienen.
                 </p>
+                </div>
                 <h2>Durchschnittsgehälter nach Bundesland</h2>
+                <div className="chapterImage">
                 {/* Interaktive Grafik */}
                 <iframe
                   aria-label="Karte"
@@ -626,6 +650,8 @@ const App: React.FC = () => {
                   }}
                   title="Durchschnittsgehälter nach Bundesland"
                 />
+                </div>
+                <div className="chapter">
                 <p>
                   Kununu hat die Gehälter auch nach Bundesland aufgeschlüsselt.
                   Mit einem durchschnittlichen Bruttojahresgehalt von 51.500
@@ -657,12 +683,16 @@ const App: React.FC = () => {
                   Mecklenburg-Vorpommern: Hier erhält der Admin demnach nur
                   42.500 Euro brutto im Jahr.
                 </p>
+                </div>
                 {/* Nerer Artikel */}
                 <h2>Cell-Broadcast-Warnung auf dem Smartphone wiederfinden</h2>
+                <div className="chapter">
                 <p>
                   Bald ist es wieder so weit. Es gibt wieder SMS-CB am Warntag.
                   Wir zeigen verschiedene Wege, diese nochmal einzusehen.
                 </p>
+                </div>
+                <div className="chapterVideo">
                 {/* heise Video */}
                 <div className="video-container">
                   <figure className="video video--fullwidth a-u-inline akwa-inline-video player">
@@ -671,14 +701,17 @@ const App: React.FC = () => {
                       frameBorder={0}
                       width="100%"
                       style={{ aspectRatio: "16 / 9" }}
+                      allow="encrypted-media"
                     ></iframe>
                     <figcaption className="video_titel a-caption">
                       (Quelle: heise online)
                     </figcaption>
                   </figure>
                 </div>
+                </div>
                 {/* Neuer Artikel */}
                 <h2>Paradox Interactive stellt "Life by You" ein</h2>
+                <div className="chapter">
                 <p>
                   Der "Sims"-Konkurrent "Life by You" sollte gerade im Early
                   Access erscheinen – stattdessen stampft Publisher Paradox die
@@ -710,6 +743,8 @@ const App: React.FC = () => {
                   war zudem als CEO von "Second Life"-Entwickler Linden Lab
                   tätig.
                 </p>
+                </div>
+                <div className="chapterVideo">
                 {/* Externes Video */}
                 <figure className="video video--fullwidth a-u-inline">
                   <div className="video__yt-container">
@@ -723,6 +758,7 @@ const App: React.FC = () => {
                     />
                   </div>
                 </figure>
+                </div>
               </div>
             </article>
             {/* Artikel Ende, jetzt folgt Werbung etc. */}

@@ -1,106 +1,50 @@
 [
   {
   "id": 1,
-  "artikelLink": "https://www.heise.de/news/Ryzen-AI-300-AMD-schiesst-gegen-Apple-Intel-und-Qualcomm-9744643.html?seite=all",
+  "artikelLink": "https://www.heise.de/news/Meta-oeffnet-Threads-API-fuer-Entwickler-9769925.html",
   "slides": [
     {
-      "type" : "TEXT_IMAGE",
-      "title" : "AMD übertrifft seine Konkurrenten",
-      "description" : "AMD hat seine ersten Notebook-Prozessoren mit Zen-5-Architektur vorgestellt: den Ryzen AI 9 HX 370 und Ryzen AI 9 365 (Strix Point). Diese Hybrid-CPUs kombinieren unterschiedliche Kerne und bieten im Vergleich zu Zen 4 eine um 16% höhere Leistung pro Taktschritt. Der Ryzen AI 9 HX 370 erreicht bis zu 5,1 GHz, verfügt über eine verbesserte Grafikeinheit und eine KI-Einheit, die 50 TOPS erreicht. Erste Notebooks mit diesen Prozessoren werden ab Juli 2024 erwartet.",
-      "url": "src/img/heiseArtikel01.jpg"
-    },
-    {
       "type" : "IMAGE_FULLSCREEN",
-      "title" : "Der Ryzen AI 9 HX 370 in seiner vollen Pracht",
-      "url": "src/img/heiseArtikel01.jpg"
-    },
-    {
-      "type" : "IMAGE", 
-      "url" : "src/img/heiseArtikel01.jpg" 
+      "title" : "Meta öffnet Threads-API für Entwickler",
+      "url": "src/img/heiseArtikel01.gif",
+      "textsize": "lg",
+      "boxposition": "center"
     },
     {
       "type" : "TEXT",
-      "title" : "AMD übertrifft seine Konkurrenten",
-      "description": "AMD hat seine ersten Notebook-Prozessoren mit Zen-5-Architektur vorgestellt: den Ryzen AI 9 HX 370 und Ryzen AI 9 365 (Strix Point). Diese Hybrid-CPUs kombinieren unterschiedliche Kerne und bieten im Vergleich zu Zen 4 eine um 16% höhere Leistung pro Taktschritt. Der Ryzen AI 9 HX 370 erreicht bis zu 5,1 GHz, verfügt über eine verbesserte Grafikeinheit und eine KI-Einheit, die 50 TOPS erreicht. Erste Notebooks mit diesen Prozessoren werden ab Juli 2024 erwartet."
-    },
-    {
-      "type" : "VIDEO",
-      "title" : "AMD übertrifft seine Konkurrenten",
-      "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
-    },
-    {
-      "type" : "PODCAST",
-      "title" : "AMD übertrifft seine Konkurrenten",
-      "imageUrl": "https://via.placeholder.com/150",
-      "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_65131_ki_update_ein_heise_pdcst_episode_1505098_ki_update_deep_dive_hemmschwellen_abbauen_mit_ki_sprachtrainern.mp3?awCollectionId=heise_16089d&awEpisodeId=1505098&source=webplayer&v=1718695322",
-      "description":"Die Fehlermeldung DPC Watchdog Violation, auch unter dem Code 0x133 ode"
-    },
-    {
-      "type" : "AD",
-      "imageUrl": "https://heise.cloudimg.io/v7/_shop-heise-de_/assets/9/c/4/f/9c4fe3528c028d57616933d38f35f75630344171_hb.2024.05.cover_without_barcode.png?optipress=2",
-      "url": "https://www.heise.de/ratgeber/Prompt-Engineering-erklaert-Von-der-Kunst-die-KI-zu-nutzen-9699079.html"
+      "title": "",
+      "description" : "Meta hat die Threads-APIs freigegeben, wie auf dem Cannes Lions Festival angekündigt. Entwickler können nun eigene Integrationen erstellen, Threads verwalten und Inhalte teilen. Die API ermöglicht das Posten über mehrere Social-Media-Kanäle, Verwaltung und Monitoring von Kennzahlen wie Likes und Aufrufen. \nDritt-App-Einbindung ist jedoch nicht möglich. Meta bietet eine ausführliche Dokumentation und Einsteiger-Anleitung an. Nach Tests mit Partnern wie Hootsuite ist die API nun für alle zugänglich. Entdecke, wie du deine Social-Media-Strategie optimieren kannst!",
+      "textsize" : "s",
+      "url": "src/img/heiseArtikel01Sub01.jpg"
     }
   ]
   },
   {
     "id": 2,
-    "artikelLink": "https://www.heise.de/ratgeber/Prompt-Engineering-erklaert-Von-der-Kunst-die-KI-zu-nutzen-9699079.html",
+    "artikelLink": " https://www.heise.de/news/Apple-verweist-auf-neue-Regeln-vorerst-keine-Apple-Intelligence-fuer-EU-iPhones-9774039.html",
     "slides": [
       {
-        "type" : "TEXT_IMAGE",
-        "title" : "Wie kreativ nutzt Du die KI?",
-        "description" : "Unternehmen wollen jetzt den nächsten Schritt gehen und die Anwendung von KI professionalisieren. Für Mitarbeiter bleibt die Frage, ob ihr Job in Gefahr ist.",
-        "url": "src/img/heiseArtikel02.jpg"
-      },
-      {
-        "type" : "IMAGE_FULLSCREEN",
-        "title" : "Wie kreativ nutzt Du die KI?",
-        "url": "src/img/heiseArtikel02.jpg"
-      },
-      {
-        "type" : "IMAGE", 
-        "url" : "src/img/heiseArtikel02.jpg" 
-      },
-      {
-        "type" : "TEXT",
-        "title" : "Wie kreativ nutzt Du die KI?",
-        "description": "Unternehmen wollen jetzt den nächsten Schritt gehen und die Anwendung von KI professionalisieren. Für Mitarbeiter bleibt die Frage, ob ihr Job in Gefahr ist."
-      },
-      {
-        "type" : "VIDEO",
-        "title" : "Wie kreativ nutzt Du die KI?",
-        "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
+        "type" : "PODCAST",
+        "title" : "Deep-Dive: Mit \"Swarm Learning\" gegen Corona",
+        "imageUrl": "src/img/podcast_cover.png",
+        "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_65131_ki_update_ein_heise_pdcst_episode_1505098_ki_update_deep_dive_hemmschwellen_abbauen_mit_ki_sprachtrainern.mp3?awCollectionId=heise_16089d&awEpisodeId=1505098&source=webplayer&v=1718695322",
+        "description": "In der aktuellen Folge geht es darum, wie durch die neue KI-Technologie \"Swarm Learning\" verteilte Datenbestände analysiert werden können. Dadurch sollen gemeinsame Daten über Covid-19 datenschutzkonform ausgewertet werden können."
       }
     ]
   },
   {
     "id": 3,
-    "artikelLink": "https://www.heise.de/tipps-tricks/Home-Automation-mit-openHAB-und-dem-Raspberry-Pi-4650663.html",
+    "artikelLink": "https://www.heise.de/blog/Meinung-Softwareentwicklung-ist-keine-Kunst-9755000.html  ",
     "slides": [
       {
-        "type" : "TEXT_IMAGE",
-        "title" : "Smart-Home-Zentrale mit dem Rasperberry PI.",
-        "description" : "Sie wollen eine eigene, herstellerunabhängige Smart-Home-Zentrale aufbauen? Für Leuchten, Heizung, Multimedia? Mit eigenen Regeln und Konfigurationen? openHAB bietet Ihnen genau das - ein wenig Bastelwille vorausgesetzt. Lesen Sie hier was openHAB kann, wie es funktioniert und wie Sie erste Dinge einbinden.",
-        "url": "src/img/heiseArtikel03.jpg"
-      },
-      {
         "type" : "IMAGE_FULLSCREEN",
-        "title" : "Smart-Home-Zentrale mit dem Rasperberry PI.",
-        "url": "src/img/heiseArtikel03.jpg"
-      },
-      {
-        "type" : "IMAGE", 
-        "url" : "src/img/heiseArtikel03.jpg" 
+        "title" : "Softwareentwicklung ist keine Kunst",
+        "textsize" : "4xl",
+        "url": "src/img/heiseArtikel07.png"
       },
       {
         "type" : "TEXT",
-        "title" : "Smart-Home-Zentrale mit dem Rasperberry PI.",
-        "description": "AMD hat seine ersten Notebook-Prozessoren mit Zen-5-Architektur vorgestellt: den Ryzen AI 9 HX 370 und Ryzen AI 9 365 (Strix Point). Diese Hybrid-CPUs kombinieren unterschiedliche Kerne und bieten im Vergleich zu Zen 4 eine um 16% höhere Leistung pro Taktschritt. Der Ryzen AI 9 HX 370 erreicht bis zu 5,1 GHz, verfügt über eine verbesserte Grafikeinheit und eine KI-Einheit, die 50 TOPS erreicht. Erste Notebooks mit diesen Prozessoren werden ab Juli 2024 erwartet."
-      },
-      {
-        "type" : "VIDEO",
-        "title" : "Smart-Home-Zentrale mit dem Rasperberry PI.",
-        "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
+        "description": "Tauchen Sie ein in die faszinierende Welt von Donald E. Knuth, der mit \"The Art of Computer Programming\" ein Meisterwerk der Informatikliteratur geschaffen hat. Seine tiefgründigen Zitate regen zum Nachdenken an: Ist Softwareentwicklung eine Kunst oder eine Ingenieurswissenschaft? Er vergleicht das Programmieren mit dem Komponieren und Dichten und sieht darin eine ästhetische Erfahrung, bei der Schönheit geschaffen wird." 
       }
     ]
   },
@@ -109,91 +53,105 @@
     "artikelLink": "https://www.heise.de/tipps-tricks/Kabel-TV-Anbieter-diese-Optionen-gibt-s-9590093.html",
     "slides": [
       {
-        "type" : "TEXT_IMAGE",
-        "title" : "DVB-T, Satellit oder Online-Anbieter? Was muss ich im Sommer 2024 beachten?",
-        "description" : "Sie möchten mehr über Kabelanbieter und die zukünftige Versorgung Ihres Kabelanschlusses erfahren? Hier finden Sie alle Informationen.",
-        "url": "src/img/heiseArtikel04.jpg"
-      },
-      {
-        "type" : "IMAGE_FULLSCREEN",
-        "title" : "DVB-T, Satellit oder Online-Anbieter? Was muss ich im Sommer 2024 beachten?",
-        "url": "src/img/heiseArtikel04.jpg"
-      },
-      {
-        "type" : "IMAGE", 
-        "url" : "src/img/heiseArtikel04.jpg" 
-      },
-      {
-        "type" : "TEXT",
-        "title" : "DVB-T, Satellit oder Online-Anbieter? Was muss ich im Sommer 2024 beachten?",
-        "description": "Sie möchten mehr über Kabelanbieter und die zukünftige Versorgung Ihres Kabelanschlusses erfahren? Hier finden Sie alle Informationen."
-      },
-      {
-        "type" : "VIDEO",
-        "title" : "DVB-T, Satellit oder Online-Anbieter? Was muss ich im Sommer 2024 beachten?",
-        "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
+        "type" : "AD",
+        "imageUrl": "https://heise.cloudimg.io/v7/_shop-heise-de_/assets/9/c/4/f/9c4fe3528c028d57616933d38f35f75630344171_hb.2024.05.cover_without_barcode.png?optipress=2",
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
       }
     ]
   },
   {
     "id": 5,
-    "artikelLink": "https://www.heise.de/ratgeber/Growboxen-ausprobiert-Digital-unterstuetzte-Anzuchtboxen-fuer-den-Cannabis-Anbau-9703397.html",
+    "artikelLink": "https://www.heise.de/hintergrund/Fussball-Europameisterschaft-So-funktioniert-das-Spielertracking-technisch-7335609.html",
     "slides": [
       {
-        "type" : "TEXT_IMAGE",
-        "title" : "Hanfanbau ist legal, aber nicht banal",
-        "description" : "Drei Cannabispflanzen darf man daheim aufziehen. Helfen kann eine Anzuchtbox, die sich um Licht, Wasser und Lüftung für die anspruchsvollen Gewächse kümmert.",
-        "url": "src/img/heiseArtikel05.jpg"
-      },
-      {
-        "type" : "IMAGE_FULLSCREEN",
-        "title" : "Hanfanbau ist legal, aber nicht banal",
-        "url": "src/img/heiseArtikel05.jpg"
-      },
-      {
-        "type" : "IMAGE", 
-        "url" : "src/img/heiseArtikel05.jpg" 
-      },
-      {
-        "type" : "TEXT",
-        "title" : "Hanfanbau ist legal, aber nicht banal",
-        "description": "Drei Cannabispflanzen darf man daheim aufziehen. Helfen kann eine Anzuchtbox, die sich um Licht, Wasser und Lüftung für die anspruchsvollen Gewächse kümmert."
-      },
-      {
         "type" : "VIDEO",
-        "title" : "Hanfanbau ist legal, aber nicht banal",
-        "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
+        "title" : "“Fußball-Europameisterschaft: So funktioniert das Spielertracking technisch”",
+        "url": "src/img/heise_vid_fussball.mp4"
       }
     ]
   },
   {
     "id": 6,
-    "artikelLink": "https://www.heise.de/tipps-tricks/DPC-Watchdog-Violation-so-beheben-Sie-den-Fehler-4683212.html",
+    "artikelLink": "https://www.heise.de/hintergrund/Die-kleine-Codefabrik-KI-Tools-fuer-Entwickler-im-Ueberblick-9758025.html?seite=1 ",
     "slides": [
       {
-        "type" : "TEXT_IMAGE",
-        "title" : "DPC Watchdog Violation, was ist da los?",
-        "description" : "Die Fehlermeldung DPC Watchdog Violation, auch unter dem Code 0x133 oder 0x00000133 verbreitet, ist ein sehr häufiger Fehler bei Windows-Installationen, besonders auch unter Windows 10. Der Fehler verursacht einen Bluescreen und lässt Ihr System automatisch neu starten. Wir zeigen Ihnen im Folgenden die Ursachen und weitere tipps+tricks, mit denen Sie den Fehler beheben können.",
-        "url": "src/img/heiseArtikel06.jpg"
-      },
-      {
         "type" : "IMAGE_FULLSCREEN",
-        "title" : "DPC Watchdog Violation, was ist da los?",
+        "title" : "Wie smart codest Du wirklich?",
         "url": "src/img/heiseArtikel06.jpg"
-      },
-      {
-        "type" : "IMAGE", 
-        "url" : "src/img/heiseArtikel06.jpg" 
       },
       {
         "type" : "TEXT",
-        "title" : "DPC Watchdog Violation, was ist da los?",
-        "description": "Die Fehlermeldung DPC Watchdog Violation, auch unter dem Code 0x133 oder 0x00000133 verbreitet, ist ein sehr häufiger Fehler bei Windows-Installationen, besonders auch unter Windows 10. Der Fehler verursacht einen Bluescreen und lässt Ihr System automatisch neu starten. Wir zeigen Ihnen im Folgenden die Ursachen und weitere tipps+tricks, mit denen Sie den Fehler beheben können."
+        "title" : "",
+        "description": "Einfach nur lcm() eingeben, eine Tastenkombination drücken und schon hat man eine Funktion, die das kleinste gemeinsame Vielfache berechnet. \nEine derart weitreichende Programmierhilfe ermöglichen KI-Coding-Tools wie der GitHub Copilot. \nAnders als die eingebaute Autovervollständigung der IDEs verstehen die Werkzeuge den Sinn des vorhandenen Quellcodes und schlagen dann auf Zuruf passende Codeblöcke vor. Die cleveren Tools können aber noch mehr. \nWir stellen Euch einige davon vor."
       },
       {
+        "type" : "TEXT_IMAGE",
+        "title" : "Gitlab Duo",
+        "url": "src/img/heiseArtikel06SUB01.gif"
+      },
+      {
+        "type" : "TEXT",
+        "title" : "\"Ein GitLab Duo to GO\"",
+        "description": "Zu den Hauptfunktionen von GitLab Duo gehören automatische Code-Vervollständigung, intelligente Code-Snippets, Code-Optimierung, Fehlererkennung und -vorschläge sowie Dokumentationsvorschläge. Zusätzlich unterstützt das Tool beim Refactoring und integriert sich nahtlos mit anderen GitLab-Features wie Merge Requests und Pipelines. Es funktioniert mit verschiedenen Programmiersprachen und verbessert die Produktivität und Code-Qualität durch Reduzierung repetitiver Aufgaben und Unterstützung bei komplexen Entwicklungen.",
+        "url": "src/img/heiseArtikel06SUB02.jpg",
+        "textsize": "s"
+      },
+      {
+        "type" : "TEXT_IMAGE",
+        "title" : "Amazon Q Developer",
+        "url": "src/img/heiseArtikel06SUB03.gif"
+      },
+      {
+        "type" : "TEXT",
+        "title" : "\"Amazon rückt vor\"",
+        "description": "Ehemals als CodeWhisperer bekannt, integriert sich Q Developer nahtlos ins Amazon-Ökosystem. Der KI-Assistent schreibt automatisch Tests, die in der Amazon-Cloud laufen, und unterstützt AutoML sowie AWS-Dienste wie S3, Lambda und SageMaker. Die Plattform bietet Sicherheitsmaßnahmen, unterstützt verschiedene Programmiersprachen und erleichtert die Teamarbeit bei der Entwicklung komplexer KI-Anwendungen.",
+        "url": "src/img/heiseArtikel06SUB04.jpg",
+        "textsize": "xs"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "artikelLink": "https://www.heise.de/tipps-tricks/DPC-Watchdog-Violation-so-beheben-Sie-den-Fehler-4683212.html",
+    "slides": [
+      {
+        "type" : "AD",
+        "imageUrl": "src/img/heiseArtikel08.png",
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "artikelLink": "https://www.heise.de/news/Apple-verweist-auf-neue-Regeln-vorerst-keine-Apple-Intelligence-fuer-EU-iPhones-9774039.html",
+    "slides": [
+      {
+        "type" : "PODCAST",
+        "title" : "Apple Intelligence, iOS 18 & Co: Erste Analyse der WWDC 2024",
+        "imageUrl": "src/img/podcast_cover_MacAndI.png",
+        "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_28908_mac_i_der_apple_pdcst_episode_1498661_apple_intelligence_ios_18_co_erste_analyse_der_wwdc_2024.mp3?awCollectionId=heise_db3ddb&awEpisodeId=1498661&source=webplayer&v=1718197925",
+        "description": "In Episode 74 diskutieren Malte Kirchner und Leo Becker über die Intelligenz der \"Apple Intelligence\", das KI-Mischmodell, bei dem Teile lokal und andere auf Apple-Servern laufen, sowie Datenschutzversprechen und Verbesserungen in den Betriebssystemen, einschließlich iPadOS."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "artikelLink": "https://www.heise.de/news/Atlas-ist-zurueck-Boston-Dynamics-zeigt-neuen-humanoiden-Roboter-9688922.html",
+    "slides": [
+      {
         "type" : "VIDEO",
-        "title" : "DPC Watchdog Violation, was ist da los?",
-        "url": "https://cdn.pixabay.com/video/2024/02/15/200647-913478656_large.mp4"
+        "title" : "",
+        "url": "src/img/heiseArtikel09Video.mp4"
+      },
+      {
+        "type" : "TEXT",
+        "description": "Nur einen Tag nachdem Boston Dynamics seinen hydraulisch betriebenen humanoiden Roboter Atlas ausgemustert hat, präsentiert das Robotikunternehmen am Mittwoch bereits seinen Nachfolger. Der neue, 'elektrische' Atlas bringt auch gleich eine ganze Reihe an Verbesserungen mit. An erster Stelle sind das elektromotorische Aktuatoren, die dem Roboter einen leiseren Betrieb ermöglichen.",
+        "textsize": "s"
+      },
+      {
+        "type" : "TEXT",
+        "description": "Zudem haben die Entwickler ihn mit neuen KI- und maschinellen Lernwerkzeugen ausgestattet, sodass er Arbeiten effizient erledigen und sich an komplexe Arbeitssituationen anpassen kann. Das markiert zugleich den Einstieg in die kommerzielle Vermarktung des humanoiden Roboters, der zunächst testweise bei Hyundai in der Automobilproduktion eingesetzt werden könnte.",
+        "textsize": "s"
       }
     ]
   }

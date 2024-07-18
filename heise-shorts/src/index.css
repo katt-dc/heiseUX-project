@@ -4,6 +4,7 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,10 +18,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  overflow: hidden;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.short__slide-buttons{
+  width: 125%;
+}
+
+/* Controlls for Mobile */
+@media screen and (max-width: 480px){
+  .short__slide-buttons{
+    width: 100%;
+  }
+}
+
+/* tailwind-overrides*/
+.text-4xl{
+  font-weight: 600;
 }

@@ -1,0 +1,51 @@
+.info-icon-container {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.info-icon-container.progressbar {
+  margin-left: -5px;
+}
+
+.info-icon-container.bookmarkbar {
+  margin-left: -10px;
+}
+
+.info-icon {
+  cursor: pointer;
+}
+
+.info-icon-image {
+  width: 24px;
+  height: 24px;
+}
+
+.infobox {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 9999;
+  width: 600px;
+  max-width: 90vw;
+}
+
+.infobox img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.infobox.bookmarkbar-infobox {
+  width: 700px;
+  height: auto;
+}
+
+.infobox.bookmarkbar-infobox img {
+  width: 100%;
+  height: auto;
+}

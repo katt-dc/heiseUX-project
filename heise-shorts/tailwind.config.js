@@ -30,9 +30,29 @@ export default {
               animationTimingFunction: 'ease-out',
             },
           },
+          slideIn: {
+            '0%': {
+              transform: 'translateY(400px)',
+              opacity: '0'
+            },
+            '100%': {
+              transform: 'translateY(0)',
+              opacity: '1'
+            }
+          },
+          fadeIn: {
+            '0%': {
+              opacity: '0'
+            },
+            '100%': {
+              opacity: '1'
+            }
+          }
         },
         animation: {
           bounceIn: 'bounceIn 0.3s ease-in-out',
+          slideIn: 'slideIn 0.3s ease-out forwards',
+          fadeIn: 'fadeIn 0.3s ease-out forwards'
         }
     },
     plugins: [

@@ -21,27 +21,28 @@ function convertJsonToStructure(jsonData: SlideItem[]): Short[] {
           return new FullScreenImageWithTextSlideData(
             slide.url,
             slide.title,
-            slide.description
+            slide.description,
+            slide.textsize,
+            slide.boxposition
           );
         case SlideType.IMAGE_FULLSCREEN:
-          return new FullScreenImageSlideData(
-            slide.url,
-            slide.title
-          );
+          return new FullScreenImageSlideData(slide.url, slide.title);
         case SlideType.IMAGE:
-          return new ImageSlideData(
-            slide.url
-          );
+          return new ImageSlideData(slide.url);
         case SlideType.TEXT:
           return new TextSlideData(
             slide.title,
             slide.description,
-            slide.url
+            slide.url,
+            slide.textsize
           );
         case SlideType.VIDEO:
           return new VideoSlideData(
             slide.url,
-            slide.description
+            slide.title,
+            slide.description,
+            slide.textsize,
+            slide.boxposition
           );
         case SlideType.PODCAST:
           return new PodcastSlideData(
@@ -51,16 +52,14 @@ function convertJsonToStructure(jsonData: SlideItem[]): Short[] {
             slide.audioUrl
           );
         case SlideType.AD:
-          return new AdSlideData(
-            slide.url,
-            slide.imageUrl
-          );
+          return new AdSlideData(slide.url, slide.imageUrl);
         default:
           throw new Error(`Unbekannter Slide-Typ: ${slide.type}`);
       }
     });
     return {
       artikelLink: item.artikelLink,
+      id: item.id,
       slides: slides
     };
   });

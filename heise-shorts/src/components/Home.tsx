@@ -3,7 +3,7 @@ import ShortsShelf from "./ShortShelf";
 
 const Home = () => {
   return (
-    <div className="flex items-center p-10">
+    <div className="flex w-9/12 pt-3 mx-auto">
       <ShortsShelf>
         
       </ShortsShelf>
