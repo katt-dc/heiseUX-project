@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 import "./ProgressBar.css";
 import ChapterOverlay from "./ChapterOverlay";
 import InfoIcon from "./InfoIcon"; // Import der InfoIcon-Komponente
-import infoIcon from "./images/infoicon.png"; // Pfad zum InfoIcon-Bild
-import infoboxImage from "./images/infobox.jpg"; // Pfad zur Infobox-Bilddatei
+import infoIcon from "../img/infoicon.png"; // Pfad zum InfoIcon-Bild
+import infoboxImage from "../img/infobox.jpg"; // Pfad zur Infobox-Bilddatei
+
+import { useBookmarkContext } from "./BookmarkContext";
 
 const ProgressBar: React.FC = () => {
-  const [relativeScrollPosition, setScrollPosition] = useState(0);
-  const [elements, setElements] = useState<(HTMLTableElement | HTMLIFrameElement | HTMLElement)[]>([]);
-  const [headings, setHeadings] = useState<{ title: string; type: string }[]>([]);
+  const [elements, setElements] = useState<
+    (HTMLTableElement | HTMLIFrameElement | HTMLElement)[]
+  >([]);
+  const [headings, setHeadings] = useState<{ title: string; type: string }[]>(
+    []
+  );
   const [hoveredSegment, setHoveredSegment] = useState<number | null>(null);
+  const { bookmarks } = useBookmarkContext();
+  const [articleTop, setArticleTop] = useState(0);
+  const [articleBottom, setArticleBottom] = useState(0);
+  const [, forceUpdate] = useState<number>(0); // State zum Erzwingen eines Re-Renders
 
-  // Methode kann entfernt werden, wenn der Eventlistener anders verlinkt wurde
   const handleScroll = () => {
     const article = document.querySelector(".article-content");
     if (article) {
       const articleTop = article.getBoundingClientRect().top + window.scrollY;
       const articleBottom = articleTop + article.scrollHeight;
-      const scrollTop = window.scrollY;
-
-      if (scrollTop >= articleTop && scrollTop <= articleBottom) {
-        const totalScroll = articleBottom - articleTop;
-        const currentScroll = scrollTop - articleTop;
-        setScrollPosition((currentScroll / totalScroll) * 100);
-      } else if (scrollTop < articleTop) {
-        setScrollPosition(0);
-      } else {
-        setScrollPosition(100);
-      }
+      setArticleBottom(articleBottom);
+      setArticleTop(articleTop);
+      forceUpdate(Date.now()); // Re-Render erzwingen
     }
   };
 
@@ -43,10 +43,33 @@ const ProgressBar: React.FC = () => {
   };
 
   useEffect(() => {
-    const tables = Array.from(document.getElementsByTagName("table")) as HTMLTableElement[];
-    const iframes = Array.from(document.getElementsByTagName("iframe")) as HTMLIFrameElement[];
-    const hTags = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6")) as HTMLElement[];
-    const chapters = Array.from(document.querySelectorAll(".chapter")) as HTMLElement[];
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleBookmarkClick = (start: number) => {
+    const offset = 85;
+    window.scrollTo({
+      top: start - offset,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const tables = Array.from(
+      document.getElementsByTagName("table")
+    ) as HTMLTableElement[];
+    const iframes = Array.from(
+      document.getElementsByTagName("iframe")
+    ) as HTMLIFrameElement[];
+    const hTags = Array.from(
+      document.querySelectorAll("h1, h2, h3, h4, h5, h6")
+    ) as HTMLElement[];
+    const chapters = Array.from(
+      document.querySelectorAll(".chapter")
+    ) as HTMLElement[];
 
     // Combine chapters, tables, and iframes for processing
     const allElements = [...chapters, ...tables, ...iframes];
@@ -69,16 +92,18 @@ const ProgressBar: React.FC = () => {
     const headingsList = allElements.map((element) => {
       const elementTop = element.getBoundingClientRect().top + window.scrollY;
       const lastHeading = hTags
-        .filter((h) => h.getBoundingClientRect().top + window.scrollY < elementTop)
+        .filter(
+          (h) => h.getBoundingClientRect().top + window.scrollY < elementTop
+        )
         .pop();
-      
+
       let type = "";
-      if(element.tagName === "TABLE") {
+      if (element.tagName === "TABLE") {
         type = "(Tabelle)";
       } else if (element.tagName === "IFRAME") {
         type = "(Bild/Video)";
-      } 
-      
+      }
+
       return {
         title: lastHeading ? lastHeading.innerText : "",
         type: type,
@@ -94,76 +119,125 @@ const ProgressBar: React.FC = () => {
     };
   }, []);
 
-  const totalHeight = elements.reduce(
-    (acc, el) => acc + el.getBoundingClientRect().height,
-    0
-  );
+  const getArticleBounds = (article: HTMLElement) => {
+    const articleTop = article.getBoundingClientRect().top + window.scrollY;
+    const articleBottom = articleTop + article.scrollHeight;
+    return { articleTop, articleBottom };
+  };
 
-  const progressBarSegments: JSX.Element[] = [];
-  for (let index = 0; index < elements.length; index++) {
-    const el = elements[index];
-    const article = document.querySelector(".article-content");
-    if (article) {
-      const articleTop = article.getBoundingClientRect().top + window.scrollY;
-      const articleBottom = articleTop + article.scrollHeight;
+  const getElementBounds = (el: HTMLElement) => {
+    const elementRect = el.getBoundingClientRect();
+    const elementHeight = elementRect.height;
+    const elementTop = elementRect.top + window.scrollY;
+    return { elementHeight, elementTop };
+  };
 
-      const elementRect = el.getBoundingClientRect();
-      const elementHeight = elementRect.height;
-      const elementTop = elementRect.top + window.scrollY;
+  const getSegmentColors = (el: HTMLElement) => {
+    let segmentColorProgress = "#7EC699";
+    let segmentColorBackground = "#D9D9D9";
 
-      let fillPercentage = 0;
-      let isHighlight = false;
-      let segmentColorProgress = "#7EC699";
-      let segmentColorBackground = "#D9D9D9";
+    if (el.tagName === "TABLE") {
+      segmentColorProgress = "#DA8A18";
+      segmentColorBackground = "#FCA311";
+    } else if (el.tagName === "IFRAME") {
+      segmentColorProgress = "#6C8ED4";
+      segmentColorBackground = "#98B9FF";
+    }
 
-      if (el.tagName === "TABLE") {
-        isHighlight = true;
-        segmentColorProgress = "#DA8A18";
-        segmentColorBackground = "#FCA311";
-      } else if (el.tagName === "IFRAME") {
-        isHighlight = true;
-        segmentColorProgress = "#6C8ED4";
-        segmentColorBackground = "#98B9FF";
-      }
+    return { segmentColorProgress, segmentColorBackground };
+  };
 
-      let samePriviosHeading = false;
-      let sameNextHeading = false;
-      let previousHeading = null;
-      let nextHeading = null;
-      const hTags = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6")) as HTMLElement[];
+  const getFillPercentage = (
+    windowScrollY: number,
+    elementTop: number,
+    elementHeight: number,
+    articleBottom: number
+  ) => {
+    let fillPercentage = 0;
 
-      const currentHeading = hTags
-        .filter((h) => h.getBoundingClientRect().top + window.scrollY < el.getBoundingClientRect().top + window.scrollY)
-        .pop();
-      if (elements[index - 1]){
-        previousHeading = hTags
-          .filter((h) => h.getBoundingClientRect().top + window.scrollY < elements[index - 1].getBoundingClientRect().top + window.scrollY)
-          .pop();
-      }
-      if (elements[index + 1]){
-        nextHeading = hTags
-          .filter((h) => h.getBoundingClientRect().top + window.scrollY > elements[index + 1].getBoundingClientRect().top + window.scrollY)
-          .pop();
-      }
-      if (currentHeading === previousHeading){
-        samePriviosHeading = true;
-      } else if (currentHeading === nextHeading) {
-        sameNextHeading = true;
-      }
-
-      if (articleBottom > window.scrollY) {
-        if (window.scrollY >= elementTop && window.scrollY < elementTop + elementHeight) {
-          const visibleHeight = window.scrollY - elementTop;
-          fillPercentage = (visibleHeight / elementHeight) * 100;
-          if (fillPercentage > 100) {
-            fillPercentage = 100;
-          }
-        } else if (window.scrollY > elementTop + elementHeight) {
+    if (articleBottom > windowScrollY) {
+      if (
+        windowScrollY >= elementTop &&
+        windowScrollY < elementTop + elementHeight
+      ) {
+        const visibleHeight = windowScrollY - elementTop;
+        fillPercentage = (visibleHeight / elementHeight) * 100;
+        if (fillPercentage > 100) {
           fillPercentage = 100;
         }
-      } else {
+      } else if (windowScrollY > elementTop + elementHeight) {
         fillPercentage = 100;
       }
+    } else {
+      fillPercentage = 100;
+    }
+
+    return fillPercentage;
+  };
+
+  const getHeadings = (
+    elements: HTMLElement[],
+    hTags: HTMLElement[],
+    index: number
+  ) => {
+    const currentHeading = hTags
+      .filter(
+        (h) =>
+          h.getBoundingClientRect().top + window.scrollY <
+          elements[index].getBoundingClientRect().top + window.scrollY
+      )
+      .pop();
+
+    let previousHeading = null;
+    if (elements[index - 1]) {
+      previousHeading = hTags
+        .filter(
+          (h) =>
+            h.getBoundingClientRect().top + window.scrollY <
+            elements[index - 1].getBoundingClientRect().top + window.scrollY
+        )
+        .pop();
+    }
+
+    const samePreviousHeading = currentHeading === previousHeading;
+
+    return { currentHeading, previousHeading, samePreviousHeading };
+  };
+
+  const generateProgressBarSegments = (
+    elements: HTMLElement[],
+    hoveredSegment: number | null,
+    setHoveredSegment: (index: number | null) => void,
+    handleSegmentClick: (index: number) => void,
+    headings: { title: string; type: string }[]
+  ): JSX.Element[] => {
+    const progressBarSegments: JSX.Element[] = [];
+    const article = document.querySelector(".article-content") as HTMLElement;
+
+    if (!article) return progressBarSegments;
+
+    const {articleBottom } = getArticleBounds(article);
+    const totalHeight = elements.reduce(
+      (acc, el) => acc + el.getBoundingClientRect().height,
+      0
+    );
+
+    const hTags = Array.from(
+      document.querySelectorAll("h1, h2, h3, h4, h5, h6")
+    ) as HTMLElement[];
+
+    for (let index = 0; index < elements.length; index++) {
+      const el = elements[index];
+      const { elementHeight, elementTop } = getElementBounds(el);
+      const { segmentColorProgress, segmentColorBackground } =
+        getSegmentColors(el);
+      const { samePreviousHeading } = getHeadings(elements, hTags, index);
+      const fillPercentage = getFillPercentage(
+        window.scrollY,
+        elementTop,
+        elementHeight,
+        articleBottom
+      );
 
       progressBarSegments.push(
         <div
@@ -174,7 +248,7 @@ const ProgressBar: React.FC = () => {
             backgroundColor: segmentColorBackground,
             position: "relative",
             cursor: "pointer",
-            marginLeft: samePriviosHeading ? "0%" : "0.6%",
+            marginLeft: samePreviousHeading ? "0%" : "0.6%",
             transition: "height 0.3s ease, opacity 0.3s ease",
           }}
           onClick={() => handleSegmentClick(index)}
@@ -188,11 +262,11 @@ const ProgressBar: React.FC = () => {
               backgroundColor: segmentColorProgress,
             }}
           ></div>
-          {hoveredSegment === index &&(
+          {hoveredSegment === index && (
             <ChapterOverlay
               text={`${headings[index].title} ${headings[index].type}`}
               visible={hoveredSegment === index}
-              />
+            />
           )}
           {/* Transparentes Overlay für größere Klickfläche */}
           <div
@@ -209,15 +283,58 @@ const ProgressBar: React.FC = () => {
         </div>
       );
     }
-  }
+
+    return progressBarSegments;
+  };
+
+  const progressBarSegments = generateProgressBarSegments(
+    elements,
+    hoveredSegment,
+    setHoveredSegment,
+    handleSegmentClick,
+    headings
+  );
 
   return (
     <div className="progress-bar-container">
       <div style={{ display: "flex", alignItems: "center", zIndex: 1 }}>
-        <InfoIcon additionalClass="progressbar" imageSrc={infoIcon} infoboxImage={infoboxImage} /> {/* InfoIcon-Komponente hier hinzugefügt */}
-        <div className="progress-bar-background"></div> {/* Hintergrundbox für die Leseleiste */}
-        <div style={{ display: "flex", width: "calc(100% - 20px)", margin: "0 10px" }}>
+        <InfoIcon
+          additionalClass="progressbar"
+          imageSrc={infoIcon}
+          infoboxImage={infoboxImage}
+        />{" "}
+        {/* InfoIcon-Komponente hier hinzugefügt */}
+        <div className="progress-bar-background"></div>{" "}
+        {/* Hintergrundbox für die Leseleiste */}
+        <div
+          style={{
+            display: "flex",
+            width: "calc(100% - 20px)",
+            margin: "0 10px",
+            position: "relative",
+          }}
+        >
           {progressBarSegments} {/* Segmente der Leseleiste */}
+          {bookmarks.map((bookmark) => (
+            <div
+              key={bookmark.id}
+              className="bookmark"
+              style={{
+                position: "absolute",
+                top: "10px",
+                left: `${
+                  ((bookmark.start - articleTop) /
+                    (articleBottom - articleTop)) *
+                  100
+                }%`,
+                backgroundColor: "purple",
+                width: "5px",
+                height: "10px",
+                cursor: "pointer",
+              }}
+              onClick={() => handleBookmarkClick(bookmark.start)}
+            />
+          ))}
         </div>
       </div>
     </div>

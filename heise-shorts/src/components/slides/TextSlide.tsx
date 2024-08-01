@@ -15,7 +15,7 @@ export default function TextSlide({
   textsize,
 }: TextSlideProps) {
   return (
-    <div className="flex flex-col mx-10 h-full justify-center items-center pb-10">
+    <div className="flex flex-col mx-10 h-full justify-center items-center py-10">
       {headline !== "" ? (
         <Headline headline={headline} fade={false} />
       ) : null}

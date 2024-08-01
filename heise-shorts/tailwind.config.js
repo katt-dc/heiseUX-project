@@ -5,6 +5,20 @@ export default {
       "./index.html",
       "./src/**/*.{js,ts,jsx,tsx}",
     ],
+    // dynamische Generierung von Klassen nicht möglich in Tailwind (Workaround: safelist)
+    safelist: [
+      'text-xs',
+      'text-sm',
+      'text-base',
+      'text-lg',
+      'text-xl',
+      'text-2xl',
+      'text-3xl',
+      'text-4xl',
+      'items-start',
+      'items-center',
+      'items-end',
+    ],
     theme: {
       extend: {
         colors: {
@@ -14,6 +28,11 @@ export default {
         },
         fontSize:{
           'xxs': '0.6rem'
+        },
+        fontFamily:{
+          'inria-serif': ['"Inria Serif"', 'serif'],
+          'inter': ['Inter', 'sans-serif'],
+
         },
         keyframes: {
           bounceIn: {

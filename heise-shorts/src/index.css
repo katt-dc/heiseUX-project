@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -18,30 +18,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-.short__slide-buttons{
+.short__slide-buttons {
   width: 125%;
 }
 
 /* Controlls for Mobile */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
   .short__slide-buttons{
     width: 100%;
   }
 }
 
 /* tailwind-overrides*/
-.text-4xl{
+.text-4xl {
   font-weight: 600;
 }

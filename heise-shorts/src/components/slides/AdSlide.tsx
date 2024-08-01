@@ -1,9 +1,18 @@
 interface AdSlideProps {
-  url: string;
+  url?: string;
+  images?: string[];
   link: string;
+  title: string;
+  description: string;
 }
 
-export default function AdSlide({ url, link }: AdSlideProps) {
+export default function AdSlide({
+  url,
+  images,
+  link,
+  title,
+  description,
+}: AdSlideProps) {
   return (
     <div
       className={`w-full h-full absolute left-0 top-0 bg-cover bg-no-repeat bg-center bg-color-heise-dark-grey rounded-xl flex items-center justify-center flex-col`}
@@ -42,7 +51,7 @@ export default function AdSlide({ url, link }: AdSlideProps) {
         />
       </svg>
       <div
-        className="rounded-xl bg-heise-white my-2 flex items-center justify-center flex-col"
+        className="rounded-lg bg-heise-white my-2 flex items-center justify-center flex-col"
         style={{ width: "75%", height: "80%" }}
       >
         <a
@@ -51,17 +60,29 @@ export default function AdSlide({ url, link }: AdSlideProps) {
           rel="noopener noreferrer"
           className="flex items-center justify-center py-3"
         >
-          <img src={url} style={{ width: "80%" }} />
+          {url && !images && <img src={url} style={{ width: "80%" }} />}
+          {images && images.length === 4 && (
+            <div
+              className="grid grid-cols-2 gap-x-4 gap-y-4"
+              style={{ width: "100%", display: "grid", placeItems: "center" }}
+            >
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center"
+                  style={{ width: "100%", maxWidth: "100px", height: "auto" }}
+                >
+                  <img src={img} style={{ width: "100%" }} />
+                </div>
+              ))}
+            </div>
+          )}
         </a>
         <div className="w-full flex px-4 py-2">
-          <div className="text-black text-base/[17px]">
-            Mit heise+ noch mehr Artikel und all unsere Magazine lesen.
-          </div>
+          <div className="text-black text-base/[17px]">{title}</div>
         </div>
         <div className="w-full flex px-6 pt-3">
-          <div className="text-black text-xxs font-bold">
-            Kostenlos ausprobieren, danach ab 3€ mtl.
-          </div>
+          <div className="text-black text-xxs font-bold">{description}</div>
         </div>
       </div>
       <div
@@ -70,7 +91,7 @@ export default function AdSlide({ url, link }: AdSlideProps) {
       >
         <a
           href={link}
-          className="bg-blue-500 hover:bg-blue-700 text-heise-weiß font-semibold rounded-3xl w-fit h-fit py-1 px-4 flex items-center justify-center text-sm transition-all"
+          className="bg-blue-500 hover:bg-blue-700 text-heise-weiß font-semibold rounded-3xl w-fit h-fit py-2 px-4 flex items-center justify-center text-sm transition-all"
           target="_blank"
         >
           zu heise+

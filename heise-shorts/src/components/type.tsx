@@ -1,3 +1,5 @@
+import { TextBoxProps } from "./text-components/TextBox";
+
 export enum SlideType {
   TEXT_IMAGE = "TEXT_IMAGE",
   IMAGE_FULLSCREEN = "IMAGE_FULLSCREEN",
@@ -6,16 +8,20 @@ export enum SlideType {
   VIDEO = "VIDEO",
   PODCAST = "PODCAST",
   AD = "AD",
+  AD_COMPLEX = "AD_COMPLEX",
 }
 
 export interface SlideData {
+  duration: number;
   isSlideType(type: SlideType): boolean;
 }
 
 export class ImageSlideData implements SlideData {
   url: string;
-  constructor(url: string) {
+  duration: number;
+  constructor(url: string, duration: number) {
     this.url = url;
+    this.duration = duration || 5;
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE;
@@ -27,14 +33,17 @@ export class TextSlideData implements SlideData {
   description: string;
   url: string;
   textsize: string;
+  duration: number;
   constructor(
     title: string,
     description: string,
+    duration: number,
     url?: string,
     textsize?: string
   ) {
     this.title = title;
     this.description = description;
+    this.duration = duration || 5;
     this.url = url || "";
     this.textsize = textsize || "base";
   }
@@ -46,9 +55,11 @@ export class TextSlideData implements SlideData {
 export class FullScreenImageSlideData implements SlideData {
   url: string;
   title: string;
-  constructor(url: string, title: string) {
+  duration: number;
+  constructor(url: string, title: string, duration: number) {
     this.url = url;
     this.title = title;
+    this.duration = duration || 5;
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE_FULLSCREEN;
@@ -59,18 +70,21 @@ export class FullScreenImageWithTextSlideData implements SlideData {
   url: string;
   title: string;
   description: string;
-  textsize: string;
-  boxposition: string;
+  textsize: TextBoxProps["textsize"];
+  boxposition: TextBoxProps["position"];
+  duration: number;
   constructor(
     url: string,
     title: string,
     description: string,
-    textsize: string,
-    boxposition: string
+    duration: number,
+    textsize?: TextBoxProps["textsize"],
+    boxposition?: TextBoxProps["position"]
   ) {
     this.url = url;
     this.title = title;
     this.description = description;
+    this.duration = duration || 5;
     this.textsize = textsize || "base";
     this.boxposition = boxposition || "center";
   }
@@ -78,28 +92,33 @@ export class FullScreenImageWithTextSlideData implements SlideData {
     return type === SlideType.TEXT_IMAGE;
   }
 }
-
 export class VideoSlideData implements SlideData {
   url: string;
   title: string;
   description: string;
-  textsize: string;
-  boxposition: string;
+  textsize: TextBoxProps["textsize"];
+  boxposition: TextBoxProps["position"];
+  duration: number;
   constructor(
     url: string,
     title: string,
     description: string,
-    textsize: string,
-    boxposition: string
+    duration: number,
+    textsize?: TextBoxProps["textsize"],
+    boxposition?: TextBoxProps["position"]
   ) {
     this.url = url;
     this.title = title;
     this.description = description;
+    this.duration = duration || 5;
     this.textsize = textsize || "base";
     this.boxposition = boxposition || "center";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.VIDEO;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
@@ -108,17 +127,19 @@ export class PodcastSlideData implements SlideData {
   text: string;
   imageUrl: string;
   audioUrl: string;
-
+  duration: number;
   constructor(
     title: string,
     text: string,
     imageUrl: string,
-    audioUrl: string
+    audioUrl: string,
+    duration: number
   ) {
     this.title = title;
     this.text = text;
     this.imageUrl = imageUrl;
     this.audioUrl = audioUrl;
+    this.duration = duration || 30;
   }
 
   isSlideType(type: SlideType): boolean {
@@ -128,29 +149,71 @@ export class PodcastSlideData implements SlideData {
 
 export class AdSlideData implements SlideData {
   url: string;
-  imageUrl: string;
+  imageUrl?: string;
+  images?: string[];
+  title: string;
+  description: string;
+  duration: number;
 
-  constructor(url: string, imageUrl: string) {
+  constructor(
+    url: string,
+    title: string,
+    description: string,
+    imageUrl?: string,
+    images?: string[],
+    duration?: number
+  ) {
     this.url = url;
     this.imageUrl = imageUrl;
+    this.title = title;
+    this.description = description;
+    this.images = images;
+    this.duration = duration || 5;
   }
-
   isSlideType(type: SlideType): boolean {
     return type === SlideType.AD;
   }
 }
+
+export class ComplexAdSlideData implements SlideData {
+  url: string;
+  title?: string;
+  description?: string;
+  images: string[];
+  text: string[];
+  duration: number;
+
+  constructor(
+    url: string,
+    title: string,
+    description: string,
+    images: string[],
+    text: string[],
+    duration?: number
+  ) {
+    this.url = url;
+    this.images = images;
+    this.title = title;
+    this.description = description;
+    this.text = text;
+    this.duration = duration || 5;
+  }
+
+  isSlideType(type: SlideType): boolean {
+    return type === SlideType.AD_COMPLEX;
+  }
+}
+
 export class TyleSlideData implements SlideData {
   url: string;
   title: string;
   imageUrl: string;
-  constructor(
-    url: string, 
-    title: string,
-    imageUrl: string
-  ) {
+  duration: number;
+  constructor(title: string, imageUrl: string, duration: number) {
     this.url = imageUrl || "";
-    this.title = title || "" ;
+    this.title = title || "";
     this.imageUrl = imageUrl;
+    this.duration = duration;
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE_FULLSCREEN;
@@ -158,7 +221,9 @@ export class TyleSlideData implements SlideData {
 }
 
 export interface Short {
+  id: number;
   artikelLink: string;
+  id: number;
   slides: SlideData[];
 }
 
@@ -166,12 +231,15 @@ export interface SlideItem {
   id: number;
   artikelLink: string;
   slides: {
+    duration: number;
     type: SlideType;
     title: string;
     description: string;
+    text: string[];
     url: string;
     audioUrl: string;
     imageUrl: string;
+    images: string[];
     textsize: string;
     boxposition: string;
   }[];

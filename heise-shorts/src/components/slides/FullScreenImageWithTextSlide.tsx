@@ -1,4 +1,4 @@
-import React from "react";
+import { TextBoxProps } from "../text-components/TextBox";
 import TextBox from "../text-components/TextBox";
 import Headline from "../text-components/Headline";
 
@@ -6,8 +6,8 @@ interface FullScreenImageWithTextSlideProps {
   url: string;
   headline: string;
   text: string;
-  textsize: string;
-  boxposition: string;
+  textsize: TextBoxProps["textsize"];
+  boxposition: TextBoxProps["position"];
 }
 
 export default function FullScreenImageWithTextSlide({

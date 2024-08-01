@@ -7,7 +7,11 @@ interface InfoIconProps {
   infoboxImage: string;
 }
 
-const InfoIcon: React.FC<InfoIconProps> = ({ additionalClass, imageSrc, infoboxImage }) => {
+const InfoIcon: React.FC<InfoIconProps> = ({
+  additionalClass,
+  imageSrc,
+  infoboxImage,
+}) => {
   const [isInfoboxVisible, setInfoboxVisible] = useState(false);
 
   const showInfobox = () => {
@@ -19,8 +23,15 @@ const InfoIcon: React.FC<InfoIconProps> = ({ additionalClass, imageSrc, infoboxI
   };
 
   return (
-    <div className={`info-icon-container ${additionalClass}`} onMouseLeave={hideInfobox}>
-      <div className="info-icon" onClick={showInfobox} onMouseEnter={showInfobox}>
+    <div
+      className={`info-icon-container ${additionalClass}`}
+      onMouseLeave={hideInfobox}
+    >
+      <div
+        className="info-icon"
+        onClick={showInfobox}
+        onMouseEnter={showInfobox}
+      >
         <img src={imageSrc} alt="Info Icon" className="info-icon-image" />
       </div>
       {isInfoboxVisible && (

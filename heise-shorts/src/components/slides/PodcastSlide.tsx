@@ -105,7 +105,7 @@ export default function PodcastSlide({
         </div>
         <button
           onClick={handleMuteToggle}
-          className="absolute bottom-4 right-4"
+          className="absolute bottom-4 right-4 text-xl"
         >
           <i
             className={`fa-solid ${

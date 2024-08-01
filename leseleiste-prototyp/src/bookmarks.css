@@ -4,7 +4,7 @@
   left: 62%;
   transform: translateX(-50%);
   background-color: #2c2c2c;
-  z-index: 5; /* Niedrigerer Z-Index, damit die Infobox darüber liegt */
+  z-index: 5; /* Bookmarks sollen über dem Text angezeigt werden */
   border-radius: 5px;
   padding: 10px 20px;
   display: flex;
@@ -62,7 +62,7 @@
 }
 
 .info-icon-container.bookmarkbar {
-  margin-right: 10px; /* Abstand zwischen dem InfoIcon und den Buttons in der Bookmarkbar */
+  margin-right: 10px;
 }
 
 .bookmarks-toggle,
@@ -74,7 +74,7 @@
   cursor: pointer;
   border-radius: 5px;
   margin-right: 10px;
-  z-index: 5; /* Sicherstellen, dass die Schaltflächen über der Leiste liegen */
+  z-index: 5;
 }
 
 .bookmark-button {
@@ -91,9 +91,9 @@
   top: 100%;
   left: 0;
   right: 0;
-  max-height: 600px; /* Maximale Höhe des Dropdowns */
-  overflow-y: auto; /* Scrollbalken aktivieren, wenn der Inhalt die max. Höhe überschreitet */
-  z-index: 5; /* Sicherstellen, dass die Liste über der Leiste liegt */
+  max-height: 600px;
+  overflow-y: auto;
+  z-index: 5;
 }
 
 .bookmark-item {
@@ -115,7 +115,7 @@
 .bookmark-item .back-link {
   position: absolute;
   top: 10px;
-  right: 30px; /* Platz für das X-Symbol */
+  right: 30px;
   color: #007bff;
   cursor: pointer;
   text-decoration: underline;
@@ -139,11 +139,11 @@
 
 /* Hervorgehoben/Markierte Texte (Bookmarks) */
 .highlighted {
-  background-color: yellow; /* Hintergrundfarbe */
-  color: black; /* Textfarbe */
-  font-weight: bold; /* Fett */
-  padding: 2px; /* Innenabstand */
-  border-radius: 3px; /* Abgerundete Ecken */
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 3px;
 }
 
 /* Modal Styling */
@@ -167,7 +167,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
-  text-align: center; /* Zentrierung des Inhalts */
+  text-align: center;
 }
 
 .bookmark-name-input {
@@ -178,7 +178,7 @@
 }
 
 .modal-content button {
-  margin-top: 10px; /* Abstand zwischen den Buttons */
+  margin-top: 10px;
   padding: 5px 10px;
   font-size: 14px;
 }

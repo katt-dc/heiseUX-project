@@ -1,8 +1,9 @@
-interface TextBoxProps {
+export interface TextBoxProps {
     text: string;
-    textsize: string;
-    position: string;
+    textsize: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
+    position: "top" | "center" | "bottom";
 }
+
 const posTypes: { [key: string]: string } = {
     top: "items-start",
     center: "items-center",

@@ -8,14 +8,16 @@
       "title" : "Meta öffnet Threads-API für Entwickler",
       "url": "src/img/heiseArtikel01.gif",
       "textsize": "lg",
-      "boxposition": "center"
+      "boxposition": "center",
+      "duration": 10
     },
     {
       "type" : "TEXT",
       "title": "",
       "description" : "Meta hat die Threads-APIs freigegeben, wie auf dem Cannes Lions Festival angekündigt. Entwickler können nun eigene Integrationen erstellen, Threads verwalten und Inhalte teilen. Die API ermöglicht das Posten über mehrere Social-Media-Kanäle, Verwaltung und Monitoring von Kennzahlen wie Likes und Aufrufen. \nDritt-App-Einbindung ist jedoch nicht möglich. Meta bietet eine ausführliche Dokumentation und Einsteiger-Anleitung an. Nach Tests mit Partnern wie Hootsuite ist die API nun für alle zugänglich. Entdecke, wie du deine Social-Media-Strategie optimieren kannst!",
       "textsize" : "s",
-      "url": "src/img/heiseArtikel01Sub01.jpg"
+      "url": "src/img/heiseArtikel01Sub01.jpg",
+      "duration": 15
     }
   ]
   },
@@ -50,12 +52,22 @@
   },
   {
     "id": 4,
-    "artikelLink": "https://www.heise.de/tipps-tricks/Kabel-TV-Anbieter-diese-Optionen-gibt-s-9590093.html",
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
     "slides": [
       {
         "type" : "AD",
-        "imageUrl": "https://heise.cloudimg.io/v7/_shop-heise-de_/assets/9/c/4/f/9c4fe3528c028d57616933d38f35f75630344171_hb.2024.05.cover_without_barcode.png?optipress=2",
+        "title": "Mit heise+ noch mehr Artikel und all unsere Magazine lesen.",
+        "description": "Kostenlos ausprobieren, danach ab 3€ mtl.",
+        
+        "images": [
+          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ct/2024/16.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=398",
+          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/mac-and-i/2024/3.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373",
+          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ix/2024/7.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373",
+          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ix-special/2023/1.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373"
+
+        ],
         "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
+        
       }
     ]
   },
@@ -112,11 +124,17 @@
   },
   {
     "id": 7,
-    "artikelLink": "https://www.heise.de/tipps-tricks/DPC-Watchdog-Violation-so-beheben-Sie-den-Fehler-4683212.html",
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
     "slides": [
       {
-        "type" : "AD",
-        "imageUrl": "src/img/heiseArtikel08.png",
+        "type" : "AD_COMPLEX",
+        "title": "Exklusives Angebot in Kooperation mit Heise Online",
+        "description": "Lesen Sie 3 Monate kostenlos F.A.Z PRO D:ECONOMY inklusive unbegrenztem Zugriff zu FAZ+",
+        "images": [
+          "src/img/header.png",
+          "src/img/frankfurter.png",
+          "src/img/price1.png"
+          ],
         "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
       }
     ]
@@ -154,5 +172,43 @@
         "textsize": "s"
       }
     ]
+  },
+  {
+    "id": 10,
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "slides": [
+      {
+        "type" : "AD_COMPLEX",
+        "images": [
+          "src/img/heiseplus.png",
+          "src/img/heiseplus_img.png",
+          "src/img/price2.png"
+          ],
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select",
+        "text": [
+          "Aktionsangebot - Nur bis zum 31. Mai:",
+          "1 Jahr heise+ vergünstigt",
+          "Nach einem Jahr Laufzeit jederzeit zum Monatsende kündbar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "slides": [
+      {
+        "type" : "AD",
+        "title": "Mit heise+ noch mehr Artikel und all unsere Magazine lesen.",
+        "description": "Kostenlos ausprobieren, danach ab 3€ mtl.",
+        
+        "imageUrl": 
+          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ct/2024/16.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=398",
+          
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
+        
+      }
+    ]
   }
+  
 ]

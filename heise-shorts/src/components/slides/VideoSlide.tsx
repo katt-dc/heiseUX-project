@@ -1,21 +1,25 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import Headline from "../text-components/Headline";
 import TextBox from "../text-components/TextBox";
+import { TextBoxProps } from "../text-components/TextBox";
+
 
 interface VideoSlideProps {
     url: string;
     headline: string;
     text: string;
-    textsize: string;
-    boxposition: string;
+    textsize: TextBoxProps["textsize"];
+    boxposition: TextBoxProps["position"];
+    onDurationChange: (duration: number) => void;
 }
 
 export default function VideoSlide({
-   url,
-   headline,
-   text,
-   textsize,
-   boxposition,
+    url,
+    headline,
+    text,
+    textsize,
+    boxposition,
+    onDurationChange
 }: VideoSlideProps) {
 
     const [isMuted, setIsMuted] = useState(false);
@@ -32,6 +36,17 @@ export default function VideoSlide({
     };
 
     useEffect(() => {
+        const videoElement = videoRef.current;
+
+        const handleLoadedMetadata = () => {
+            if (videoElement) {
+                onDurationChange(videoElement.duration);
+            }
+        };
+        if (videoElement) {
+            videoElement.addEventListener("loadedmetadata", handleLoadedMetadata);
+        }
+
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             setIsMuted(!entry.isIntersecting); // Video stummschalten, wenn nicht sichtbar
@@ -76,7 +91,7 @@ export default function VideoSlide({
             </div>
             <button
                 onClick={toggleMute}
-                className="absolute bottom-4 right-4"
+                className="absolute bottom-4 right-4 text-xl"
             >
                 <i className={`fa-solid ${isMuted ? 'fa-volume-xmark' : 'fa-volume-high'}`}></i>
             </button>
