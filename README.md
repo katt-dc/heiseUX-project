@@ -16,7 +16,7 @@ As part of a collaborative effort with heise Online, this project aims to enhanc
 #### Progress Bar
 - **Progress Tracking**: Shows the user's progress progress within an article.
 - **Navigation Aid**: Allows users to quickly jump to different sections of an article.
-- **Bookmark Option**: Allows readers to seamlessly continue reading from where they last left off.
+- **Bookmark Option**: Allows readers to manually select and save a specific line of text, enabling them to return to that exact point later.
 
 ### Installation
 
@@ -41,3 +41,6 @@ To run the prototypes locally, follow these steps:
 
 ### Usage
 After starting the development server, you can access the prototypes in your web browser at http://localhost:5173. The homepage will provide links to both the Shorts and Progress Bar prototypes.
+
+### Important Information: 
+We prepared for the Shorts prototype a checklist called 'Checkliste_heiseArtikelFormate', which contains the analysis of heise articles suitable for our different Shorts formats. This checklist is still in progress and will further discussed eventually with heise's editorial office. 
