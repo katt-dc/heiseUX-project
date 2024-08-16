@@ -3,7 +3,7 @@ import Short from "./Short.tsx";
 import { Structure } from "./Structure.tsx";
 import { motion } from "framer-motion";
 import ShareComponent from "./ShareComponent.tsx";
-/* import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function getRouting() {
   const location = useLocation();
@@ -23,10 +23,15 @@ function sortStructure(index: number) {
       Structure[0] = tmp;
     }
   }
-} */
+}
+
 const ShortsScroller = () => {
   const shortsNumber = Structure.length;
-
+  const shortToLoad = getRouting();
+  if (shortToLoad != -1) {
+    sortStructure(shortToLoad);
+  }
+  
   const [currentShortIndex, setCurrentShortIndex] = useState(0);
 
   const refs: React.RefObject<HTMLDivElement>[] = [];

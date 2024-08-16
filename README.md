@@ -43,4 +43,4 @@ To run the prototypes locally, follow these steps:
 After starting the development server, you can access the prototypes in your web browser at http://localhost:5173. The homepage will provide links to both the Shorts and Progress Bar prototypes.
 
 ### Important Information: 
-We prepared for the Shorts prototype a checklist called 'Checkliste_heiseArtikelFormate', which contains the analysis of heise articles suitable for our different Shorts formats. This checklist is still in progress and will further discussed eventually with heise's editorial office. 
+We prepared for the Shorts prototype a checklist called 'Checkliste_heiseArtikelFormate', which contains the analysis of heise articles suitable for our different Shorts formats. This checklist is still in progress and will further discussed eventually with heise's editorial office. You can find the checklist in following path: heiseux-project/heise-shorts/Checkliste_heiseArtikelFormate.pdf. 
