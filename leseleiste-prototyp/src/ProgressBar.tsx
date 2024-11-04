@@ -64,6 +64,9 @@ const ProgressBar: React.FC = () => {
     const iframes = Array.from(
       document.getElementsByTagName("iframe")
     ) as HTMLIFrameElement[];
+    const images = Array.from(
+      document.querySelectorAll("article .chapterImage img")
+    ) as HTMLImageElement[];    
     const hTags = Array.from(
       document.querySelectorAll("h1, h2, h3, h4, h5, h6")
     ) as HTMLElement[];
@@ -72,7 +75,8 @@ const ProgressBar: React.FC = () => {
     ) as HTMLElement[];
 
     // Combine chapters, tables, and iframes for processing
-    const allElements = [...chapters, ...tables, ...iframes];
+    const allElements = [...chapters, ...tables, ...iframes, ...images];
+
 
     // Elemente nach ihrer vertikalen Position sortieren
     allElements.sort((a, b) => {
@@ -100,9 +104,10 @@ const ProgressBar: React.FC = () => {
       let type = "";
       if (element.tagName === "TABLE") {
         type = "(Tabelle)";
-      } else if (element.tagName === "IFRAME") {
+      } else if (element.tagName === "IFRAME" || element.tagName === "IMG") {
         type = "(Bild/Video)";
       }
+      
 
       return {
         title: lastHeading ? lastHeading.innerText : "",
@@ -139,7 +144,7 @@ const ProgressBar: React.FC = () => {
     if (el.tagName === "TABLE") {
       segmentColorProgress = "#DA8A18";
       segmentColorBackground = "#FCA311";
-    } else if (el.tagName === "IFRAME") {
+    } else if (el.tagName === "IFRAME" || el.tagName === "IMG") {
       segmentColorProgress = "#6C8ED4";
       segmentColorBackground = "#98B9FF";
     }

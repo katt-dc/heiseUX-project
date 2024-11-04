@@ -101,6 +101,13 @@ main {
   margin-bottom: 20px;
 }
 
+.article-content .img-text {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
 .article-content h2 {
   font-size: 22px;
   margin-top: 20px;

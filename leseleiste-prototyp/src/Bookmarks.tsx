@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./bookmarks.css";
 import InfoIcon from "./InfoIcon"; // Import der InfoIcon-Komponente
 import infoIcon from "../img/infoicon.png"; // Pfad zum InfoIcon-Bild
@@ -18,6 +18,34 @@ const Bookmarks: React.FC = () => {
   );
   const [newBookmarkName, setNewBookmarkName] = useState("");
 
+  // Ref für das Dropdown-Element und Button
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  // Click-Outside-Listener mit useEffect
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Falls der Klick außerhalb des Dropdowns UND des Buttons ist, schließe das Dropdown
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    // Cleanup Listener bei Schließen des Dropdowns
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   const openModal = () => {
     const selectedText = window.getSelection()?.toString();
     const range = window.getSelection()?.getRangeAt(0);
@@ -29,7 +57,6 @@ const Bookmarks: React.FC = () => {
     }
   };
 
-  // Typen für die Funktionen definieren
   const createAndInsertHighlight = (
     range: Range,
     id: string
@@ -38,7 +65,6 @@ const Bookmarks: React.FC = () => {
     span.id = id;
     span.classList.add("highlighted");
 
-    // Sicherstellen, dass der Range keine nicht-Text-Knoten teilweise auswählt
     if (
       range.startContainer.nodeType === Node.TEXT_NODE &&
       range.endContainer.nodeType === Node.TEXT_NODE
@@ -58,7 +84,6 @@ const Bookmarks: React.FC = () => {
     return span;
   };
 
-  // Funktion zum Abrufen der Start- und Endpositionen des markierten Bereichs
   const getHighlightPositions = (
     element: HTMLElement
   ): { start: number; end: number } => {
@@ -67,30 +92,110 @@ const Bookmarks: React.FC = () => {
     return { start, end };
   };
 
-  // Hauptfunktion zum Hinzufügen eines neuen Lesezeichens
   const addNewBookmark = () => {
     const id = `bookmark-${new Date().getTime()}`;
     if (range && selectedText) {
-      const span = createAndInsertHighlight(range, id);
-      if (!span) return;
+      const selection = window.getSelection();
 
-      const { start, end } = getHighlightPositions(span);
+      if (selection != null) {
+        const range = selection.getRangeAt(0); // Der ausgewählte Bereich
+        const startNode = range.startContainer;
+        const endNode = range.endContainer;
+        const startOffset = range.startOffset;
+        const endOffset = range.endOffset; // Das Element, das den Textknoten enthält
+        // Das Element, das den Textknoten enthält
 
-      addBookmark({
-        text: selectedText,
-        id,
-        name: bookmarkName,
-        start,
-        end,
-      });
-      setSelectedText(null);
-      setBookmarkName("");
-      setRange(null);
-      setIsModalOpen(false);
+        if (startNode == endNode) {
+          const span = createAndInsertHighlight(range, id);
+
+          if (!span) return;
+
+          const { start, end } = getHighlightPositions(span);
+
+          addBookmark({
+            text: selectedText,
+            id,
+            name: bookmarkName,
+            start,
+            end,
+          });
+
+          setSelectedText(null);
+          setBookmarkName("");
+          setRange(null);
+          setIsModalOpen(false);
+          return;
+        }
+
+        console.log("Ausgewählter Text:", selection.toString());
+        console.log("Zugehöriges DOM-Element Start:", startNode);
+        console.log("Zugehöriges DOM-Element Ende:", endNode);
+
+        const walker = document.createTreeWalker(
+          range.commonAncestorContainer,
+          NodeFilter.SHOW_TEXT,
+          {
+            acceptNode: (node) => {
+              if (range.intersectsNode(node)) {
+                return NodeFilter.FILTER_ACCEPT;
+              }
+              return NodeFilter.FILTER_REJECT;
+            },
+          }
+        );
+
+        let currentNode: Node | null = walker.currentNode;
+        const selectedNodes = [];
+
+        while (currentNode !== null) {
+          selectedNodes.push(currentNode);
+          currentNode = walker.nextNode();
+        }
+
+        delete selectedNodes[0];
+
+        console.log("Ausgewählte Knoten:", selectedNodes);
+
+        selectedNodes.forEach((textNode) => {
+          const newRange = document.createRange();
+          if (textNode === startNode && textNode === endNode) {
+            newRange.setStart(textNode, startOffset);
+            newRange.setEnd(textNode, endOffset);
+          } else if (textNode === startNode) {
+            newRange.setStart(textNode, startOffset);
+            if (textNode.textContent !== null) {
+              newRange.setEnd(textNode, textNode.textContent.length);
+            }
+          } else if (textNode === endNode) {
+            newRange.setStart(textNode, 0);
+            newRange.setEnd(textNode, endOffset);
+          } else {
+            newRange.selectNodeContents(textNode);
+          }
+          createAndInsertHighlight(newRange, id);
+        });
+
+        const start = startOffset;
+        const end = endOffset;
+
+        addBookmark({
+          text: selectedText,
+          id,
+          name: bookmarkName,
+          start,
+          end,
+        });
+
+        setSelectedText(null);
+        setBookmarkName("");
+        setRange(null);
+        setIsModalOpen(false);
+      }
     }
   };
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Verhindert, dass der Click als outside-Klick gewertet wird
     setIsDropdownOpen((prevState) => !prevState);
   };
 
@@ -105,12 +210,37 @@ const Bookmarks: React.FC = () => {
     }
   };
 
-  const handleRemoveBookmark = (id: string) => {
-    removeBookmark(id);
-    const element = document.getElementById(id);
-    if (element) {
-      element.classList.remove("highlighted");
+  function unwrapSpan(span: Element | null) {
+    if (span && span.tagName === "SPAN") {
+      const parent = span.parentNode;
+      while (span.firstChild) {
+        parent?.insertBefore(span.firstChild, span);
+      }
+      parent?.removeChild(span);
     }
+  }
+
+  const handleRemoveBookmark = (id: string) => {
+    const elements = document.getElementsByClassName("highlighted");
+
+    const highlitedelements = [];
+
+    for (const element of elements) {
+      if (element.id == id) {
+        highlitedelements.push(element);
+      }
+    }
+
+    console.log(highlitedelements);
+
+    highlitedelements.forEach((element) => {
+      if (element.classList.contains("highlighted")) {
+        element.classList.remove("highlighted");
+        unwrapSpan(element);
+      }
+    });
+
+    removeBookmark(id);
   };
 
   const handleEditBookmark = (id: string) => {
@@ -137,15 +267,19 @@ const Bookmarks: React.FC = () => {
           imageSrc={infoIcon}
           infoboxImage={infoboxImage}
         />
-        <button className="bookmarks-toggle" onClick={toggleDropdown}>
-          My Bookmarks ▼
+        <button
+          className="bookmarks-toggle"
+          onClick={toggleDropdown}
+          ref={buttonRef} // Ref zum Button hinzugefügt
+        >
+          My Bookmarks {isDropdownOpen ? "▲" : "▼"}
         </button>
         <button className="bookmark-button" onClick={openModal}>
           Add Bookmark
         </button>
       </div>
       {isDropdownOpen && (
-        <div className="bookmarks-list">
+        <div ref={dropdownRef} className="bookmarks-list">
           {bookmarks.map((bookmark, index) => (
             <div key={index} className="bookmark-item">
               {editingBookmarkId === bookmark.id ? (
