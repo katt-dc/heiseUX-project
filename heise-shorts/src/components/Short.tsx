@@ -24,6 +24,7 @@ import AdSlide from "./slides/AdSlide";
 import PodcastSlide from "./slides/PodcastSlide";
 import ComplexAdSlide from "./slides/ComplexAdSlide";
 
+
 interface ShortProps {
   slides: SlideData[];
   url: string;
@@ -35,6 +36,7 @@ function Short({ slides, url, isWatching }: ShortProps) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const currentSlide = slides[currentSlideIndex];
   const [progress, setProgress] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const buttonText = currentSlide.isSlideType(SlideType.PODCAST)
     ? "zum Podcast ▶"
@@ -43,6 +45,10 @@ function Short({ slides, url, isWatching }: ShortProps) {
   const nextSlide = () => {
     if (currentSlideIndex < slides.length - 1) {
       setCurrentSlideIndex(currentSlideIndex + 1);
+      setProgress(0);
+      if (paused) {
+        setPaused(false);
+      }
     } else {
       //onEnded();
     }
@@ -50,28 +56,58 @@ function Short({ slides, url, isWatching }: ShortProps) {
   const previousSlide = () => {
     if (currentSlideIndex > 0) {
       setCurrentSlideIndex(currentSlideIndex - 1);
+      setProgress(0);
+      if (paused) {
+        setPaused(false);
+      }
     }
   };
   const firstSlide = () => {
-    setCurrentSlideIndex(0);
+    // setCurrentSlideIndex(0);
+    // setProgress(0);
+    if (paused) {
+      // setPaused(false);
+    }
   };
 
   const updateSlideDuration = (duration: number) => {
     if (currentSlide.isSlideType(SlideType.VIDEO)) {
       (currentSlide as VideoSlideData).setDuration(duration);
+    } else if (
+      currentSlide.isSlideType(SlideType.TEXT) ||
+      currentSlide.isSlideType(SlideType.TEXT_IMAGE)
+    ) {
+      // Check if description exists before splitting
+      const description = (currentSlide as TextSlideData | FullScreenImageWithTextSlideData | AdSlideData | ComplexAdSlideData).description;
+      if (description) {
+        const words = description.split(" ");
+        const calculatedDuration = Math.ceil((words.length / 200) * 60);
+        (currentSlide as SlideData).setDuration(calculatedDuration);
+        // console.log("calculated duration: ", calculatedDuration); //TODO delete debug log
+      } else {
+        // Fallback duration if description is missing or empty
+        (currentSlide as SlideData).setDuration(duration || 5);
+      }
+    } else if (
+      currentSlide.isSlideType(SlideType.IMAGE) ||
+      currentSlide.isSlideType(SlideType.IMAGE_FULLSCREEN)
+    ) {
+      // Set a default duration for image slides if no custom duration is provided
+      (currentSlide as ImageSlideData | FullScreenImageSlideData).setDuration(duration || 5);
+    } else {
+      // Default case, apply provided duration
+      currentSlide.setDuration(duration || 5);
     }
   };
+  
 
   useEffect(() => {
-    setProgress(0);
     const increment = 100 / (currentSlide.duration * 60);
-
-    if (isWatching) {
+    if (isWatching && !paused) {
       const timer = setInterval(() => {
         setProgress((prevProgress) => {
           const newProgress = prevProgress + increment;
 
-          // If progress is 100%, go to next slide except if it's the last slide
           if (newProgress >= 100) {
             if (currentSlideIndex === slides.length - 1) {
               setTimeout(() => {
@@ -90,10 +126,13 @@ function Short({ slides, url, isWatching }: ShortProps) {
       return () => {
         clearInterval(timer);
       };
-    } else {
+    } else if (isWatching && paused) {
+      setProgress(progress);
+    } else if (!isWatching) {
+      setCurrentSlideIndex(0);
       firstSlide();
     }
-  }, [currentSlideIndex, currentSlide, isWatching]);
+  }, [currentSlideIndex, currentSlide, isWatching, paused]);
 
   const openLinkToArticle = (path: string) => {
     const newWindow = window.open(path, "_blank", "noopener,noreferrer");
@@ -104,11 +143,20 @@ function Short({ slides, url, isWatching }: ShortProps) {
     () =>
       openLinkToArticle(url);
 
+  const handleTogglePause = () => {
+    if (
+      !currentSlide.isSlideType(SlideType.AD_COMPLEX) &&
+      !currentSlide.isSlideType(SlideType.AD)
+    ) {
+      setPaused(!paused);
+    }
+  };
+
   return (
-    // h-[calc(100vh-3.5rem)] -> berechnet die maximale höhe minus höhe der navbar      md:w-80  md:w-[calc(70vh/2)]   md:h-[70vh]
-    <div className="flex justify-center rounded-xl bg-heise-light-grey md:w-[25rem] w-screen md:h-[50rem] h-[calc(100vh-3.5rem)] relative mt-[0vh] md:mt-[7.5vh]">
+    // h-[calc(100vh-3.5rem)] -> berechnet die maximale höhe minus höhe der navbar      sm:w-80  sm:w-[calc(70vh/2)]   sm:h-[70vh]
+    <div className="flex justify-center rounded-xl bg-heise-light-grey sm:w-[400px] w-screen sm:h-[800px] h-[calc(100vh-3.5rem)] relative mt-[0vh] sm:mt-[100px]">
       {/* Content */}
-      <div>
+      <div onClick={handleTogglePause} >
         {currentSlide.isSlideType(SlideType.IMAGE) ? (
           <ImageSlide url={(currentSlide as ImageSlideData).url} />
         ) : null}
@@ -118,6 +166,7 @@ function Short({ slides, url, isWatching }: ShortProps) {
             text={(currentSlide as TextSlideData).description}
             url={(currentSlide as TextSlideData).url}
             textsize={(currentSlide as TextSlideData).textsize}
+            onDurationChange={(duration) => updateSlideDuration(duration)}
           />
         ) : null}
         {currentSlide.isSlideType(SlideType.IMAGE_FULLSCREEN) ? (
@@ -134,6 +183,9 @@ function Short({ slides, url, isWatching }: ShortProps) {
             textsize={(currentSlide as VideoSlideData).textsize}
             boxposition={(currentSlide as VideoSlideData).boxposition}
             onDurationChange={(duration) => updateSlideDuration(duration)}
+            paused={paused}
+            progress={progress}
+            onPausedChange={setPaused}
           />
         ) : null}
         {currentSlide.isSlideType(SlideType.TEXT_IMAGE) ? (
@@ -176,9 +228,19 @@ function Short({ slides, url, isWatching }: ShortProps) {
             text={(currentSlide as PodcastSlideData).text}
             imageUrl={(currentSlide as PodcastSlideData).imageUrl}
             audioUrl={(currentSlide as PodcastSlideData).audioUrl}
+            paused={paused}
+            progress={progress}
+            onPausedChange={setPaused}
           />
         ) : null}
       </div>
+
+      {/* Pause Overlay */}
+       {paused && (
+        <div className="absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-20 z-40 pointer-events-none">
+          <i className="fa-solid fa-play fa-3x text-heise-white opacity-60"></i>
+        </div>
+      )}
 
       {/* Progress Indicator + Button zum Artikel*/}
       {!(

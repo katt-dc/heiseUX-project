@@ -15,7 +15,7 @@ const ShortsShelf = () => {
   for (let i = 0; i < 6; i++) {
     if (!(Structure[i].id == 4 || Structure[i].id == 7)) {
       column.push(
-        <div key={i} ref={refs[i]} className="pl-5 pr-5">
+        <div key={i} ref={refs[i]} className="pl-[2vw] pr-[2vw] h-full">
           <ShortTile slide={Structure[i].slides[0]} shortId={Structure[i].id} />
         </div>
       );
@@ -23,10 +23,10 @@ const ShortsShelf = () => {
   }
   return (
     <>
-      <div className="display: collumn bg-heise-light-grey w-full">
-        <h1 className=" pl-5 pt-5">Shorts</h1>
-        <h2 className="pl-5 pb-5 text-xl">Aktuelle Themen im Kurzformat</h2>
-        <div className="display: flex overflow-auto hide-scrollbar w-full h-full pb-5">
+      <div className="bg-heise-light-grey w-full flex flex-col">
+        <h1 className=" pl-[2vw] pt-[1vw] text-base sm:text-sm md:text-base">Shorts</h1>
+        <h2 className="pl-[2vw] pb-[1vw] text-xl sm:text-base md:text-xl">Aktuelle Themen im Kurzformat</h2>
+        <div className="flex flex-row w-full pb-5 overflow-auto hide-scrollbar sm:overflow-visible">
           {column}
         </div>
       </div>

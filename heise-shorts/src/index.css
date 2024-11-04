@@ -38,7 +38,7 @@ body {
 }
 
 /* Controlls for Mobile */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 440px){
   .short__slide-buttons{
     width: 100%;
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import Headline from "../text-components/Headline";
 
 interface TextSlideProps {
@@ -6,6 +6,7 @@ interface TextSlideProps {
   text: string;
   url: string;
   textsize: string;
+  onDurationChange: (duration: number) => void;
 }
 
 export default function TextSlide({
@@ -13,7 +14,15 @@ export default function TextSlide({
   text,
   url,
   textsize,
+  onDurationChange,
 }: TextSlideProps) {
+
+  useEffect(() => {
+    if (text) {
+      onDurationChange(0); 
+    }
+  }, [onDurationChange]);
+
   return (
     <div className="flex flex-col mx-10 h-full justify-center items-center py-10">
       {headline !== "" ? (

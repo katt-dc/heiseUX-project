@@ -11,6 +11,9 @@ interface VideoSlideProps {
     textsize: TextBoxProps["textsize"];
     boxposition: TextBoxProps["position"];
     onDurationChange: (duration: number) => void;
+    paused: boolean;
+    progress: number;
+    onPausedChange: (paused: boolean) => void;
 }
 
 export default function VideoSlide({
@@ -19,7 +22,10 @@ export default function VideoSlide({
     text,
     textsize,
     boxposition,
-    onDurationChange
+    onDurationChange,
+    paused,
+    progress,
+    onPausedChange,
 }: VideoSlideProps) {
 
     const [isMuted, setIsMuted] = useState(false);
@@ -37,6 +43,7 @@ export default function VideoSlide({
 
     useEffect(() => {
         const videoElement = videoRef.current;
+        if (!videoElement) return;
 
         const handleLoadedMetadata = () => {
             if (videoElement) {
@@ -47,6 +54,12 @@ export default function VideoSlide({
             videoElement.addEventListener("loadedmetadata", handleLoadedMetadata);
         }
 
+        const playVideo = async () => {
+            try {
+                await videoElement.play();
+            } catch (error) { /* empty */ }
+        }
+
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             setIsMuted(!entry.isIntersecting); // Video stummschalten, wenn nicht sichtbar
@@ -54,7 +67,8 @@ export default function VideoSlide({
                 videoRef.current.muted = !entry.isIntersecting;
                 if (entry.isIntersecting) {
                     videoRef.current.currentTime = 0; // Setzt die Wiedergabezeit auf den Anfang
-                    videoRef.current.play(); // Startet die Wiedergabe
+                    playVideo(); // Startet die Wiedergabe
+                    onPausedChange(false);
                 }
             }
         }, { threshold: 0.5 });
@@ -69,6 +83,44 @@ export default function VideoSlide({
             }
         };
     }, []);
+
+    useEffect(() => {
+        const videoElement = videoRef.current;
+        if (!videoElement) return;
+    
+        const playVideo = async () => {
+            try {
+                await videoElement.play();
+            } catch (error) { /* empty */ }
+        }
+
+        if(progress === 0) {
+            videoElement.currentTime = 0;
+            videoElement.pause();
+            onPausedChange(true);
+        } else {
+            playVideo();
+            onPausedChange(false);
+        }
+    }, [onPausedChange, progress]);
+
+    useEffect(() => {
+        const videoElement = videoRef.current;
+        if (!videoElement) return;
+    
+        const playVideo = async () => {
+            try {
+                await videoElement.play();
+            } catch (error) { /* empty */ }
+        }
+
+        if (paused) {
+            videoElement.pause();
+        } else {
+            playVideo();
+            // videoElement.play();
+        }
+    }, [paused]);
 
     return (
         <div ref={slideRef}>

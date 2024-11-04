@@ -7,6 +7,9 @@ interface PodcastSlideProps {
   text: string;
   imageUrl: string;
   audioUrl: string;
+  paused: boolean;
+  progress: number;
+  onPausedChange: (paused: boolean) => void;
 }
 
 export default function PodcastSlide({
@@ -14,39 +17,82 @@ export default function PodcastSlide({
   text,
   imageUrl,
   audioUrl,
+  paused,
+  progress,
+  onPausedChange,
 }: PodcastSlideProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const progressBarRef = useRef<HTMLInputElement>(null);
+  // const progressBarRef = useRef<HTMLInputElement>(null);
   const slideRef = useRef<HTMLDivElement>(null); // Ref für den Slide Container
   const [isMuted, setIsMuted] = useState(false);
+  // const [paused, setPaused] = useState(false);
+
+  // useEffect(() => {
+  //   const audioElement = audioRef.current;
+
+  //   if (!audioElement) return;
+
+  //   const handleTimeUpdate = () => {
+  //     const currentTime = audioElement.currentTime;
+  //     if (progressBarRef.current) {
+  //       progressBarRef.current.value = currentTime.toString();
+  //       progressBarRef.current.style.setProperty(
+  //         "--range-progress",
+  //         `${(parseFloat(progressBarRef.current.value) / 30) * 100}%`
+  //       );
+  //     }
+  //     if (currentTime >= 30) {
+  //       audioElement.currentTime = 0;
+  //       audioElement.play();
+  //     }
+  //   };
+
+  //   audioElement.addEventListener("timeupdate", handleTimeUpdate);
+  //   audioElement.play();
+
+  //   return () => {
+  //     audioElement.removeEventListener("timeupdate", handleTimeUpdate);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const audioElement = audioRef.current;
-
     if (!audioElement) return;
 
-    const handleTimeUpdate = () => {
-      const currentTime = audioElement.currentTime;
-      if (progressBarRef.current) {
-        progressBarRef.current.value = currentTime.toString();
-        progressBarRef.current.style.setProperty(
-          "--range-progress",
-          `${(parseFloat(progressBarRef.current.value) / 30) * 100}%`
-        );
-      }
-      if (currentTime >= 30) {
-        audioElement.currentTime = 0;
-        audioElement.play();
-      }
-    };
+    const playAudio = async () => {
+      try {
+        await audioElement.play();
+      } catch (error) { /* empty */ }
+    }
 
-    audioElement.addEventListener("timeupdate", handleTimeUpdate);
-    audioElement.play();
+    if(progress === 0) {
+      audioElement.currentTime = 0;
+      audioElement.pause();
+      onPausedChange(true);
+    } else {
+      playAudio();
+      onPausedChange(false);
+    }
 
-    return () => {
-      audioElement.removeEventListener("timeupdate", handleTimeUpdate);
-    };
-  }, []);
+  }, [onPausedChange, progress]);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    if (!audioElement) return;
+
+    const playAudio = async () => {
+      try {
+        await audioElement.play();
+      } catch (error) { /* empty */ }
+    }
+
+    if (paused) {
+      audioElement.pause();
+    } else {
+      playAudio();
+    }
+
+  }, [paused]);
 
   const handleMuteToggle = () => {
     const audioElement = audioRef.current;
@@ -57,6 +103,15 @@ export default function PodcastSlide({
   };
 
   useEffect(() => {
+    const audioElement = audioRef.current;
+    if (!audioElement) return;
+
+    const playAudio = async () => {
+      try {
+        await audioElement.play();
+      } catch (error) { /* empty */ }
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -65,7 +120,8 @@ export default function PodcastSlide({
           audioRef.current.muted = !entry.isIntersecting;
           if (entry.isIntersecting) {
             audioRef.current.currentTime = 0; // Setzt die Wiedergabezeit auf den Anfang
-            audioRef.current.play(); // Startet die Wiedergabe
+            playAudio(); // Startet die Wiedergabe
+            onPausedChange(false);
           }
         }
       },
@@ -101,7 +157,7 @@ export default function PodcastSlide({
             ) : null}
           </div>
           <audio autoPlay muted={isMuted} src={audioUrl} ref={audioRef} />
-          <TextBox text={text} textsize="sm" position="center" />
+          <TextBox text={text} textsize="lg" position="center" />
         </div>
         <button
           onClick={handleMuteToggle}

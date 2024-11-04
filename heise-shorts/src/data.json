@@ -1,151 +1,125 @@
 [
   {
-  "id": 1,
-  "artikelLink": "https://www.heise.de/news/Meta-oeffnet-Threads-API-fuer-Entwickler-9769925.html",
-  "slides": [
-    {
-      "type" : "IMAGE_FULLSCREEN",
-      "title" : "Meta öffnet Threads-API für Entwickler",
-      "url": "src/img/heiseArtikel01.gif",
-      "textsize": "lg",
-      "boxposition": "center",
-      "duration": 10
-    },
-    {
-      "type" : "TEXT",
-      "title": "",
-      "description" : "Meta hat die Threads-APIs freigegeben, wie auf dem Cannes Lions Festival angekündigt. Entwickler können nun eigene Integrationen erstellen, Threads verwalten und Inhalte teilen. Die API ermöglicht das Posten über mehrere Social-Media-Kanäle, Verwaltung und Monitoring von Kennzahlen wie Likes und Aufrufen. \nDritt-App-Einbindung ist jedoch nicht möglich. Meta bietet eine ausführliche Dokumentation und Einsteiger-Anleitung an. Nach Tests mit Partnern wie Hootsuite ist die API nun für alle zugänglich. Entdecke, wie du deine Social-Media-Strategie optimieren kannst!",
-      "textsize" : "s",
-      "url": "src/img/heiseArtikel01Sub01.jpg",
-      "duration": 15
-    }
-  ]
+    "id": 1,
+    "artikelLink": "https://www.heise.de/news/Meta-oeffnet-Threads-API-fuer-Entwickler-9769925.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Meta öffnet Threads-API für Entwickler",
+        "description": "Meta hat die Threads-APIs freigegeben, wie auf dem Cannes Lions Festival angekündigt.",
+        "url": "src/img/heiseArtikel01.gif"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Integration und Funktionen",
+        "description": "Entwickler können nun eigene Integrationen erstellen, Threads verwalten und Inhalte teilen. Die API ermöglicht das Posten über mehrere Social-Media-Kanäle.",
+        "url": "src/img/heiseArtikel01Sub01.jpg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Dritt-App-Einbindungen",
+        "description": "Dritt-App-Einbindungen sind jedoch nicht möglich. Meta bietet eine ausführliche Dokumentation und Einsteiger-Anleitung an.",
+        "url": "src/img/heiseArtikel01Sub01.jpg"
+      },
+      {
+        "type": "TEXT",
+        "title": "Zugänglichkeit",
+        "description": "Nach Tests mit Partnern wie Hootsuite ist die API nun für alle zugänglich. Entdecke, wie du deine Social-Media-Strategie optimieren kannst.",
+        "url": ""
+      }
+    ]
   },
   {
     "id": 2,
-    "artikelLink": " https://www.heise.de/news/Apple-verweist-auf-neue-Regeln-vorerst-keine-Apple-Intelligence-fuer-EU-iPhones-9774039.html",
+    "artikelLink": "https://www.heise.de/ratgeber/Apples-Wie-die-Airpods-Pro-2-beim-Hoeren-helfen-9999835.html?seite=all",
     "slides": [
       {
-        "type" : "PODCAST",
-        "title" : "Deep-Dive: Mit \"Swarm Learning\" gegen Corona",
-        "imageUrl": "src/img/podcast_cover.png",
-        "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_65131_ki_update_ein_heise_pdcst_episode_1505098_ki_update_deep_dive_hemmschwellen_abbauen_mit_ki_sprachtrainern.mp3?awCollectionId=heise_16089d&awEpisodeId=1505098&source=webplayer&v=1718695322",
-        "description": "In der aktuellen Folge geht es darum, wie durch die neue KI-Technologie \"Swarm Learning\" verteilte Datenbestände analysiert werden können. Dadurch sollen gemeinsame Daten über Covid-19 datenschutzkonform ausgewertet werden können."
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Wie die Airpods Pro 2 in iOS 18.1 dem Gehör helfen",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/fotos_airpods_pro_2nd_gen_hero-94a1115c5db5f5d8.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Neuer Gehörschutz in iOS 18.1",
+        "description": "Apple hat neue Funktionen für die Airpods Pro 2 in iOS 18.1 eingeführt, die Hörhilfen und Schutzfunktionen bieten.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/audiogramm_geschnitten-3f1622f90af420f9.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1600"
+      },
+      {
+        "type": "TEXT",
+        "title": "Hörtest und Audiogramme",
+        "description": "Die Airpods Pro 2 können Ihr Gehör vermessen und die Ergebnisse in der Health-App speichern."
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Einstellen der Hörhilfen",
+        "description": "Benutzer können die Klanganpassungen für Musik, Anrufe und Medienwiedergabe aktivieren.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/einstellung_airpods-647afce90fb1a40d.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1600"
+      },
+      {
+        "type": "TEXT",
+        "title": "Adaptive Lautstärke bei Konzerten",
+        "description": "Die Airpods Pro 2 bieten dynamischen Gehörschutz bei lauten Veranstaltungen."
       }
     ]
   },
   {
     "id": 3,
-    "artikelLink": "https://www.heise.de/blog/Meinung-Softwareentwicklung-ist-keine-Kunst-9755000.html  ",
+    "artikelLink": "https://www.heise.de/news/ChatGPTs-Suche-ist-fertig-10002284.html",
     "slides": [
       {
-        "type" : "IMAGE_FULLSCREEN",
-        "title" : "Softwareentwicklung ist keine Kunst",
-        "textsize" : "4xl",
-        "url": "src/img/heiseArtikel07.png"
+        "type": "IMAGE_FULLSCREEN",
+        "title": "ChatGPTs Suche ist fertig",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/4/1/GPT-Search-Vign-c5c080ec46455c69.png"
       },
       {
-        "type" : "TEXT",
-        "description": "Tauchen Sie ein in die faszinierende Welt von Donald E. Knuth, der mit \"The Art of Computer Programming\" ein Meisterwerk der Informatikliteratur geschaffen hat. Seine tiefgründigen Zitate regen zum Nachdenken an: Ist Softwareentwicklung eine Kunst oder eine Ingenieurswissenschaft? Er vergleicht das Programmieren mit dem Komponieren und Dichten und sieht darin eine ästhetische Erfahrung, bei der Schönheit geschaffen wird." 
+        "type": "TEXT_IMAGE",
+        "title": "ChatGPT Search für Plus-Nutzer",
+        "description": "Die neue Suchfunktion ist über die Web-Oberfläche sowie die Desktop- und Mobil-Apps in den kostenpflichtigen Plus- und Team-Versionen von ChatGPT verfügbar.",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/4/1/GPT-Search-Vign-c5c080ec46455c69.png"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Websuche durch ChatGPT",
+        "description": "Nutzer können ChatGPT auffordern, Bing zur Beantwortung ihrer Fragen zu verwenden, wobei die Links zu den Treffern auf den Seiten angegeben werden.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/7/0/0/2/4/1/Bildschirmfoto_2024-11-02_um_11.16.32-3532c46312c264e0.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "description": "OpenAI plant, die Suche kontinuierlich zu verbessern und wird sie auch für Nutzer mit Gratisaccounts bereitstellen.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/7/0/0/2/4/1/Bildschirmfoto_2024-11-02_um_11.16.32-3532c46312c264e0.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
       }
     ]
   },
   {
     "id": 4,
-    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "artikelLink": "https://www.heise.de/blog/Meinung-Softwareentwicklung-ist-keine-Kunst-9755000.html",
     "slides": [
       {
-        "type" : "AD",
-        "title": "Mit heise+ noch mehr Artikel und all unsere Magazine lesen.",
-        "description": "Kostenlos ausprobieren, danach ab 3€ mtl.",
-        
-        "images": [
-          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ct/2024/16.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=398",
-          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/mac-and-i/2024/3.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373",
-          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ix/2024/7.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373",
-          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ix-special/2023/1.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=373"
-
-        ],
-        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
-        
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Softwareentwicklung ist keine Kunst",
+        "url": "src/img/heiseArtikel07.png"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Ein Meisterwerk der Informatikliteratur",
+        "description": "Tauchen Sie ein in die faszinierende Welt von Donald E. Knuth, der mit \"The Art of Computer Programming\" ein Meisterwerk der Informatikliteratur geschaffen hat. Seine tiefgründigen Zitate regen zum Nachdenken an: Ist Softwareentwicklung eine Kunst oder eine Ingenieurswissenschaft?",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/0/9/5/5/0/OVERLAY_KOMMENTAR_Kopie-172b853274014082.jpeg"
+      },
+      {
+        "type": "TEXT",
+        "title": "Ästhetik der Softwareentwicklung",
+        "description": "Er vergleicht das Programmieren mit dem Komponieren und Dichten und sieht darin eine ästhetische Erfahrung, bei der Schönheit geschaffen wird.",
+        "url": ""
       }
     ]
   },
   {
     "id": 5,
-    "artikelLink": "https://www.heise.de/hintergrund/Fussball-Europameisterschaft-So-funktioniert-das-Spielertracking-technisch-7335609.html",
-    "slides": [
-      {
-        "type" : "VIDEO",
-        "title" : "“Fußball-Europameisterschaft: So funktioniert das Spielertracking technisch”",
-        "url": "src/img/heise_vid_fussball.mp4"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "artikelLink": "https://www.heise.de/hintergrund/Die-kleine-Codefabrik-KI-Tools-fuer-Entwickler-im-Ueberblick-9758025.html?seite=1 ",
-    "slides": [
-      {
-        "type" : "IMAGE_FULLSCREEN",
-        "title" : "Wie smart codest Du wirklich?",
-        "url": "src/img/heiseArtikel06.jpg"
-      },
-      {
-        "type" : "TEXT",
-        "title" : "",
-        "description": "Einfach nur lcm() eingeben, eine Tastenkombination drücken und schon hat man eine Funktion, die das kleinste gemeinsame Vielfache berechnet. \nEine derart weitreichende Programmierhilfe ermöglichen KI-Coding-Tools wie der GitHub Copilot. \nAnders als die eingebaute Autovervollständigung der IDEs verstehen die Werkzeuge den Sinn des vorhandenen Quellcodes und schlagen dann auf Zuruf passende Codeblöcke vor. Die cleveren Tools können aber noch mehr. \nWir stellen Euch einige davon vor."
-      },
-      {
-        "type" : "TEXT_IMAGE",
-        "title" : "Gitlab Duo",
-        "url": "src/img/heiseArtikel06SUB01.gif"
-      },
-      {
-        "type" : "TEXT",
-        "title" : "\"Ein GitLab Duo to GO\"",
-        "description": "Zu den Hauptfunktionen von GitLab Duo gehören automatische Code-Vervollständigung, intelligente Code-Snippets, Code-Optimierung, Fehlererkennung und -vorschläge sowie Dokumentationsvorschläge. Zusätzlich unterstützt das Tool beim Refactoring und integriert sich nahtlos mit anderen GitLab-Features wie Merge Requests und Pipelines. Es funktioniert mit verschiedenen Programmiersprachen und verbessert die Produktivität und Code-Qualität durch Reduzierung repetitiver Aufgaben und Unterstützung bei komplexen Entwicklungen.",
-        "url": "src/img/heiseArtikel06SUB02.jpg",
-        "textsize": "s"
-      },
-      {
-        "type" : "TEXT_IMAGE",
-        "title" : "Amazon Q Developer",
-        "url": "src/img/heiseArtikel06SUB03.gif"
-      },
-      {
-        "type" : "TEXT",
-        "title" : "\"Amazon rückt vor\"",
-        "description": "Ehemals als CodeWhisperer bekannt, integriert sich Q Developer nahtlos ins Amazon-Ökosystem. Der KI-Assistent schreibt automatisch Tests, die in der Amazon-Cloud laufen, und unterstützt AutoML sowie AWS-Dienste wie S3, Lambda und SageMaker. Die Plattform bietet Sicherheitsmaßnahmen, unterstützt verschiedene Programmiersprachen und erleichtert die Teamarbeit bei der Entwicklung komplexer KI-Anwendungen.",
-        "url": "src/img/heiseArtikel06SUB04.jpg",
-        "textsize": "xs"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
-    "slides": [
-      {
-        "type" : "AD_COMPLEX",
-        "title": "Exklusives Angebot in Kooperation mit Heise Online",
-        "description": "Lesen Sie 3 Monate kostenlos F.A.Z PRO D:ECONOMY inklusive unbegrenztem Zugriff zu FAZ+",
-        "images": [
-          "src/img/header.png",
-          "src/img/frankfurter.png",
-          "src/img/price1.png"
-          ],
-        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
-      }
-    ]
-  },
-  {
-    "id": 8,
     "artikelLink": "https://www.heise.de/news/Apple-verweist-auf-neue-Regeln-vorerst-keine-Apple-Intelligence-fuer-EU-iPhones-9774039.html",
     "slides": [
       {
-        "type" : "PODCAST",
-        "title" : "Apple Intelligence, iOS 18 & Co: Erste Analyse der WWDC 2024",
+        "type": "PODCAST",
+        "title": "Apple Intelligence, iOS 18 & Co: Erste Analyse der WWDC 2024",
         "imageUrl": "src/img/podcast_cover_MacAndI.png",
         "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_28908_mac_i_der_apple_pdcst_episode_1498661_apple_intelligence_ios_18_co_erste_analyse_der_wwdc_2024.mp3?awCollectionId=heise_db3ddb&awEpisodeId=1498661&source=webplayer&v=1718197925",
         "description": "In Episode 74 diskutieren Malte Kirchner und Leo Becker über die Intelligenz der \"Apple Intelligence\", das KI-Mischmodell, bei dem Teile lokal und andere auf Apple-Servern laufen, sowie Datenschutzversprechen und Verbesserungen in den Betriebssystemen, einschließlich iPadOS."
@@ -153,37 +127,169 @@
     ]
   },
   {
-    "id": 9,
-    "artikelLink": "https://www.heise.de/news/Atlas-ist-zurueck-Boston-Dynamics-zeigt-neuen-humanoiden-Roboter-9688922.html",
+    "id": 6,
+    "artikelLink": "https://www.heise.de/ratgeber/12-Tipps-Apple-Intelligence-in-Deutschland-aktivieren-und-nutzen-9989656.html?seite=all",
     "slides": [
       {
-        "type" : "VIDEO",
-        "title" : "",
-        "url": "src/img/heiseArtikel09Video.mp4"
+        "type": "VIDEO",
+        "title": "12 Tipps: Apple Intelligence in Deutschland aktivieren und nutzen",
+        "url": "src/img/AppleIntelligence.mp4"
       },
       {
-        "type" : "TEXT",
-        "description": "Nur einen Tag nachdem Boston Dynamics seinen hydraulisch betriebenen humanoiden Roboter Atlas ausgemustert hat, präsentiert das Robotikunternehmen am Mittwoch bereits seinen Nachfolger. Der neue, 'elektrische' Atlas bringt auch gleich eine ganze Reihe an Verbesserungen mit. An erster Stelle sind das elektromotorische Aktuatoren, die dem Roboter einen leiseren Betrieb ermöglichen.",
-        "textsize": "s"
+        "type": "TEXT_IMAGE",
+        "title": "1. Apple Intelligence auf dem Mac aktivieren",
+        "description": "Aktivieren Sie die KI-Funktionen auf neueren Macs, indem Sie die Sprache auf US-Englisch umstellen.",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/mi_5_24_aufmacher_tipps_neue_systeme_ai_a_digital-35e44838acf6bd9f.jpeg"
       },
       {
-        "type" : "TEXT",
-        "description": "Zudem haben die Entwickler ihn mit neuen KI- und maschinellen Lernwerkzeugen ausgestattet, sodass er Arbeiten effizient erledigen und sich an komplexe Arbeitssituationen anpassen kann. Das markiert zugleich den Einstieg in die kommerzielle Vermarktung des humanoiden Roboters, der zunächst testweise bei Hyundai in der Automobilproduktion eingesetzt werden könnte.",
-        "textsize": "s"
+        "type": "TEXT_IMAGE",
+        "title": "2. Apple Intelligence auf iPhone und iPad anschalten",
+        "description": "Die Aktivierung auf iPhone und iPad erfordert ein wenig mehr Aufwand. Sie müssen nicht nur die Sprache auf Englisch umstellen, sondern auch eine zweite Apple-ID außerhalb der EU verwenden. Dies kann durch den Wechsel zu einem US-Account geschehen, um Zugriff auf die neuen Funktionen zu erhalten.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/apple_intelligence_settings_2405lbe_ai_tipps-ca12c743d24b1391.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1600"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "3. Writing Tools nutzen",
+        "description": "Die neuen Writing Tools von Apple Intelligence ermöglichen es Ihnen, Texte schnell zusammenzufassen, umzuformulieren und zu korrigieren. Diese Funktionen sind in allen Textanwendungen verfügbar und helfen dabei, Ihre Schreibfähigkeiten zu verbessern, indem sie intelligent Vorschläge machen.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/writing_tools_2_2405lbe_ai_tipps-7e933045ae55da08.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1600"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "4. KI-Neuerungen bei Siri",
+        "description": "Mit Apple Intelligence können Sie Siri jetzt auch durch Eingabe von Texten steuern, anstatt nur Sprachbefehle zu verwenden. Diese Funktion erleichtert die Nutzung in lauten Umgebungen und verbessert die Interaktivität mit dem Sprachassistenten erheblich.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/1_kopie-e8b317c0f6641a62.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1600"
+      }
+    ]
+  },  
+  {
+    "id": 7,
+    "artikelLink": "https://www.heise.de/news/Perseverance-Rover-der-NASA-legt-raetselhaften-gruenen-Fleck-auf-dem-Mars-frei-10002342.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Perseverance-Rover der NASA legt rätselhaften grünen Fleck auf dem Mars frei",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/7/0/Mars-Gruener-Fleck-1d96c36438189060.png"
+      },
+      {
+        "type": "TEXT",
+        "title": "Ein rätselhafter grüner Fleck auf dem Marsgestein überrascht die Forscher.",
+        "description": "Vergleichbare Flecken entstehen auf der Erde oft durch Wasser.",
+        "url": ""
+      },
+      {
+        "type": "TEXT",
+        "title": "Die NASA vermutet ähnliche Ursachen wie auf der Erde.",
+        "description": "Flecken entstehen durch Wasser und chemische Reaktionen mit Eisen. Mikroben oder organische Stoffe könnten ebenfalls eine Rolle spielen.",
+        "url": ""
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Der Rover nimmt Kurs auf den Rand des Jezero-Kraters.",
+        "description": "Dort hofft das Team, weitere Hinweise auf Wasser und vergangenes Leben zu finden.",
+        "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/TRN_view1.jpg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Was hat der grüne Fleck wirklich zu bedeuten?",
+        "description": "Die Forscher bleiben gespannt und hoffen auf weitere Entdeckungen.",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "artikelLink": "https://www.heise.de/hintergrund/Die-kleine-Codefabrik-KI-Tools-fuer-Entwickler-im-Ueberblick-9758025.html?seite=1",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Wie smart codest Du wirklich?",
+        "url": "src/img/heiseArtikel06.jpg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Einfache Programmierhilfen",
+        "description": "Mit KI-Coding-Tools wie GitHub Copilot kann man Funktionen einfach erstellen, indem man beispielsweise lcm() eingibt. Diese Tools verstehen den Code und bieten passende Vorschläge.",
+        "url": "src/img/heiseArtikel06.jpg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Gitlab Duo",
+        "url": "src/img/heiseArtikel06SUB01.gif"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Ein GitLab Duo to GO",
+        "description": "GitLab Duo bietet Funktionen wie automatische Code-Vervollständigung, intelligente Snippets und Fehlererkennung. Es verbessert die Produktivität und unterstützt verschiedene Programmiersprachen.",
+        "url": "src/img/heiseArtikel06SUB01.gif"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Amazon rückt vor",
+        "description": "Q Developer, früher CodeWhisperer, integriert sich ins Amazon-Ökosystem und schreibt automatisch Tests. Es unterstützt AWS-Dienste und verbessert die Teamarbeit bei KI-Anwendungen.",
+        "url": "src/img/heiseArtikel06SUB03.gif"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "slides": [
+      {
+        "type": "AD_COMPLEX",
+        "title": "Exklusives Angebot in Kooperation mit Heise Online",
+        "description": "Lesen Sie 3 Monate kostenlos F.A.Z PRO D:ECONOMY inklusive unbegrenztem Zugriff zu FAZ+",
+        "images": [
+          "src/img/header.png",
+          "src/img/frankfurter.png",
+          "src/img/price1.png"
+        ],
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
       }
     ]
   },
   {
     "id": 10,
+    "artikelLink": "https://www.heise.de/news/KI-Update-kompakt-Snap-Spectacles-Google-GPT-4o-Image-Playground-9999499.html",
+    "slides": [
+      {
+        "type": "PODCAST",
+        "title": "KI-Update kompakt: Snap Spectacles, Google, GPT-4o, Image Playground",
+        "imageUrl": "./src/img/podcast_cover.png",
+        "audioUrl": "https://audio.podigee-cdn.net/1652699-m-ef93260f8ca0cd5f072193cec65513ff.mp3?source=webplayer",
+        "description": "KI-Update kompakt: Snap Spectacles sind in Deutschland. Google steigert Umsatz mit KI. Gemma 2 für Japan vorgestellt. Studien zeigen Zählprobleme bei GPT-4o. GitHub Copilot bietet Modellauswahl."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "artikelLink": "https://www.heise.de/news/Atlas-ist-zurueck-Boston-Dynamics-zeigt-neuen-humanoiden-Roboter-9688922.html",
+    "slides": [
+      {
+        "type": "VIDEO",
+        "title": "",
+        "url": "src/img/heiseArtikel09Video.mp4"
+      },
+      {
+        "type": "TEXT",
+        "description": "Nur einen Tag nachdem Boston Dynamics seinen hydraulisch betriebenen humanoiden Roboter Atlas ausgemustert hat, präsentiert das Robotikunternehmen am Mittwoch bereits seinen Nachfolger. Der neue, 'elektrische' Atlas bringt auch gleich eine ganze Reihe an Verbesserungen mit. An erster Stelle sind das elektromotorische Aktuatoren, die dem Roboter einen leiseren Betrieb ermöglichen."
+      },
+      {
+        "type": "TEXT",
+        "description": "Zudem haben die Entwickler ihn mit neuen KI- und maschinellen Lernwerkzeugen ausgestattet, sodass er Arbeiten effizient erledigen und sich an komplexe Arbeitssituationen anpassen kann. Das markiert zugleich den Einstieg in die kommerzielle Vermarktung des humanoiden Roboters, der zunächst testweise bei Hyundai in der Automobilproduktion eingesetzt werden könnte."
+      }
+    ]
+  },
+  {
+    "id": 12,
     "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
     "slides": [
       {
-        "type" : "AD_COMPLEX",
+        "type": "AD_COMPLEX",
         "images": [
           "src/img/heiseplus.png",
           "src/img/heiseplus_img.png",
           "src/img/price2.png"
-          ],
+        ],
         "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select",
         "text": [
           "Aktionsangebot - Nur bis zum 31. Mai:",
@@ -194,21 +300,347 @@
     ]
   },
   {
-    "id": 11,
-    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "id": 15,
+    "artikelLink": "https://www.heise.de/news/Microsoft-Supportverlaengerung-fuer-Windows-10-auch-fuer-Privatanwender-10001194.html",
     "slides": [
       {
-        "type" : "AD",
-        "title": "Mit heise+ noch mehr Artikel und all unsere Magazine lesen.",
-        "description": "Kostenlos ausprobieren, danach ab 3€ mtl.",
-        
-        "imageUrl": 
-          "https://heise.cloudimg.io/v7/_www-heise-de_/select/thumbnail/ct/2024/16.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=30&width=398",
-          
-        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
-        
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Microsoft: Supportverlängerung für Windows 10 jetzt auch für Privatanwender",
+        "url": "src/img/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Microsoft bietet erstmals verlängerten Windows 10-Support für Privatnutzer",
+        "description": "Bislang war der erweiterte Support nur Geschäftskunden zugänglich.",
+        "url": "src/img/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Was bringt das Extended-Security-Updates-Programm (ESU)?",
+        "description": "Das ESU-Programm bietet kritische Sicherheits-Updates, jedoch keine neuen Funktionen oder Bug-Fixes. Damit bleiben Sicherheitslücken besser geschützt.",
+        "url": "src/img/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Laufzeit und Kosten für Privatkunden",
+        "description": "Windows 10-Nutzer können für 30 US-Dollar jährlich das ESU-Programm abonnieren – jedoch nur bis Oktober 2025.",
+        "url": "src/img/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Windows 11 als empfohlener Nachfolger",
+        "description": "Microsoft rät Nutzern, rechtzeitig auf Windows 11 umzusteigen, um langfristig von vollen Sicherheits- und Funktionsupdates zu profitieren.",
+        "url": "src/img/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "artikelLink": "https://www.heise.de/news/Studie-Koennen-Menschen-fuer-Roboter-Mitleid-empfinden-9997820.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Studie: Können Menschen für Roboter Mitleid empfinden?",
+        "url": "src/img/shutterstock_1071703310-d07d54f496b2e0ef.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Roboter können Mitleid hervorrufen",
+        "description": "Roboter, die 'wehleidige' Laute von sich geben oder zittern, lösen Mitleid bei Menschen aus und können sie emotional beeinflussen.",
+        "url": "src/img/shutterstock_1071703310-d07d54f496b2e0ef.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Wie reagieren Menschen auf Gewalt gegen Roboter?",
+        "description": "Probanden zeigten weniger Bereitschaft, Roboter erneut zu 'misshandeln', wenn diese emotionale Reaktionen simulierten.",
+        "url": "src/img/shutterstock_1071703310-d07d54f496b2e0ef.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Gefahr der Manipulation durch Emotionen",
+        "description": "Forscher warnen, dass Robotikunternehmen das Mitgefühl der Nutzer ausnutzen könnten, um wirtschaftlichen Gewinn zu erzielen",
+        "url": "src/img/shutterstock_1071703310-d07d54f496b2e0ef.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Regulierung für emotional reagierende Roboter gefordert",
+        "description": "Die Wissenschaftler schlagen vor, den Einsatz emotionaler Roboter zu regulieren, um Missbrauch zu verhindern, sehen aber auch positive Einsatzmöglichkeiten in der Therapie.",
+        "url": "src/img/shutterstock_1071703310-d07d54f496b2e0ef.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "artikelLink": "https://www.heise.de/news/PHP-8-4-steht-vor-der-Tuer-Noch-Fruehbuchertickets-fuer-betterCode-PHP-sichern-9996570.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "PHP 8.4 steht vor der Tür: Frühbuchertickets für betterCode() PHP sichern",
+        "url": "src/img/bcc-php-b7334515999a68bc.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "PHP 8.4 und PHPUnit 12 im Mittelpunkt",
+        "description": "Die Konferenz stellt das neue PHP 8.4-Release und PHPUnit 12 vor, inklusive aller Neuerungen und wichtiger Best Practices.",
+        "url": "src/img/bcc-php-b7334515999a68bc.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Insights von Expert*innen",
+        "description": "Release Managerin Saki Takamachi und PHPUnit-Erfinder Sebastian Bergmann führen in die Details der neuen Versionen ein. Weitere Themen: Sicherheit, Performance, Event Sourcing und mehr.",
+        "url": "src/img/bcc-php-b7334515999a68bc.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Frühbucherpreis noch bis zum 6. November",
+        "description": "Tickets sind ab 229 € erhältlich (zzgl. MwSt). Bei Gruppenbuchungen ab drei Personen gibt es weitere Rabatte.",
+        "url": "src/img/bcc-php-b7334515999a68bc.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Event-Updates und Networking-Möglichkeiten",
+        "description": "Interessierte können sich über die Konferenz-Website und LinkedIn auf dem Laufenden halten und den Newsletter abonnieren.",
+        "url": "src/img/bcc-php-b7334515999a68bc.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "artikelLink": "https://www.heise.de/news/Deutscher-Spielemarkt-schrumpft-um-6-Prozent-9834192.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Deutscher Spielemarkt schrumpft um 6 Prozent im ersten Halbjahr 2024",
+        "url": "src/img/shutterstock_2047435856-ff75bd9b61e7546a.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Hardware-Verkäufe brechen ein",
+        "description": "Konsolen wie Playstation 5 und Xbox Series X/S verzeichnen 2024 ein Umsatzminus von 18 %. Der starke Nachfrageboom der letzten Jahre flacht ab.",
+        "url": "src/img/shutterstock_2047435856-ff75bd9b61e7546a.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Mangel an Blockbuster-Spielen",
+        "description": "Das erste Halbjahr 2023 brachte viele Top-Releases. Dieses Jahr fehlten solche Highlights, was den Markt zusätzlich belastete.",
+        "url": "src/img/shutterstock_2047435856-ff75bd9b61e7546a.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Mobile Games und Gamescom als Hoffnungsträger",
+        "description": "Mobile Games sind weiterhin ein stabiler Wachstumsfaktor, und die Gamescom 2024 verspricht neue Highlights und eine Rekordzahl an Ausstellern.",
+        "url": "src/img/shutterstock_2047435856-ff75bd9b61e7546a.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "artikelLink": "https://www.heise.de/news/Noyb-gegen-X-Illegales-Datensammeln-fuer-KI-Training-9833149.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Noyb gegen X: Illegales Datensammeln für KI-Training angeklagt",
+        "url": "src/img/shutterstock_1514696930-c91ba5c6a32c3104.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Irische Behörde untersucht X-Datenpraktiken",
+        "description": "Die Datenschutzbehörde (DPC) in Irland leitet ein Verfahren gegen X ein. Grund: Nutzung persönlicher Daten ohne Nutzerzustimmung für xAI-Modelle.",
+        "url": "src/img/shutterstock_1514696930-c91ba5c6a32c3104.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Noyb fordert Einwilligung für KI-Datennutzung",
+        "description": "Der Datenschutzverein Noyb kritisiert die DPC für zögerliche Maßnahmen und hat Beschwerden in neun EU-Ländern eingereicht.",
+        "url": "src/img/shutterstock_1514696930-c91ba5c6a32c3104.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Ähnlicher Fall: Meta brach KI-Datenpläne ab",
+        "description": "Auch Meta wollte öffentliche Daten für KI nutzen, bot Nutzern jedoch eine Widerspruchsmöglichkeit – anders als X.",
+        "url": "src/img/shutterstock_1514696930-c91ba5c6a32c3104.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "X stoppt Datensammelei bis September",
+        "description": "Aktuell ist X aufgefordert, Datensammeln zu pausieren. Noyb fordert jedoch eine dauerhafte Einwilligungslösung für die EU-Nutzer.",
+        "url": "src/img/shutterstock_1514696930-c91ba5c6a32c3104.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "artikelLink": "https://www.heise.de/news/Amazon-mit-deutlich-hoeheren-Gewinnen-KI-Investitionen-in-Milliardenhoehe-10001033.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Amazon mit deutlich höheren Gewinnen, KI-Investitionen in Milliardenhöhe",
+        "url": "src/img/shutterstock_1434219221-90bb3c8149821ab0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Umsätze steigen um 11 Prozent, Gewinn wächst um 55 Prozent",
+        "description": "Amazon übertrifft Erwartungen im dritten Quartal: Der Umsatz liegt bei 158,9 Mrd. USD, der Gewinn deutlich höher als im Vorjahr.",
+        "url": "src/img/shutterstock_1434219221-90bb3c8149821ab0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Wachstum im Ausland und im Werbebereich",
+        "description": "Internationales Geschäft legt stärker zu als in den USA. Amazons Online-Werbung wächst weiter, wenn auch langsamer als bisher.",
+        "url": "src/img/shutterstock_1434219221-90bb3c8149821ab0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Amazon Cloud profitiert von massiven KI-Investitionen",
+        "description": "AWS wächst um 19 Prozent auf 27,5 Mrd. USD, Amazon investiert stark in Rechenzentren und KI-Entwicklung.",
+        "url": "src/img/shutterstock_1434219221-90bb3c8149821ab0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Positive Marktreaktionen und Prognosen für Q4",
+        "description": "Trotz konservativer Prognosen steigt der Aktienkurs nachbörslich um 6 %. Q4-Umsatz wird auf bis zu 188,5 Mrd. USD geschätzt.",
+        "url": "src/img/shutterstock_1434219221-90bb3c8149821ab0.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "artikelLink": "https://www.heise.de/news/AKW-Grafenrheinfeld-Sprengung-der-Kuehltuerme-steht-bevor-9831504.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Event-Updates und Networking-Möglichkeiten",
+        "url": "src/img/pe-e014c0a2a5b6a9a3.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Sichtbarer Rückbau des AKW Grafenrheinfeld",
+        "description": "Die beiden Kühltürme des AKWs werden aus Sicherheitsgründen gesprengt. Zehn Jahre früher als geplant, soll so mehr Platz für Rückbaumaterial geschaffen werden.",
+        "url": "src/img/pe-e014c0a2a5b6a9a3.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Geplante Fallrichtung und Sicherheitsvorkehrungen",
+        "description": "Ein Knall soll Tiere vertreiben, bevor die Kühltürme mit einem Abstand von 15 Sekunden gesprengt werden. Drohnen sind untersagt, das Gelände ist weiträumig abgesperrt.",
+        "url": "src/img/pe-e014c0a2a5b6a9a3.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Schutzmaßnahmen gegen Staub und Lärm",
+        "description": "Wasserbecken sollen den Staub reduzieren. Der erwartete Staub ist laut Betreiber weniger belastend als Saharastaub, und Erschütterungen bleiben gering.",
+        "url": "src/img/pe-e014c0a2a5b6a9a3.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "15 Jahre Rückbau, ungewisse Zukunft",
+        "description": "Der Rückbau dauert bis ca. 2040. Zukünftige Nutzung als energietechnischer Standort ist naheliegend, aber noch offen.",
+        "url": "src/img/pe-e014c0a2a5b6a9a3.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "artikelLink": "https://www.heise.de/news/Solarstrom-Regierung-will-Ueberschussfoerderung-stoppen-9997130.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Regierung will Überschussförderung stoppen",
+        "url": "src/img/Solarpanel-b6efa41182ce8cc0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Zu viel Strom im Netz führt zu Kürzungen",
+        "description": "Besonders im Sommer herrscht oft ein Stromüberschuss mit negativen Preisen. Die Regierung plant daher, Subventionen für Solarstrom bei Überkapazitäten einzuschränken.",
+        "url": "src/img/Solarpanel-b6efa41182ce8cc0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Einspeisevergütung sinkt für neue Anlagen",
+        "description": "Ab 2028 erhalten nur Anlagen bis 25 kW garantierte Tarife. Größere Anlagen müssen ihren Strom direkt vermarkten und sich dem Marktpreis anpassen.",
+        "url": "src/img/Solarpanel-b6efa41182ce8cc0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Keine Subventionen bei Negativpreisen",
+        "description": "Bei negativem Marktpreis entfällt die Förderung für alle Anlagen. Das Ziel: Investitionen in Speichertechnologien, um Überschuss-Strom zu speichern.",
+        "url": "src/img/Solarpanel-b6efa41182ce8cc0.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "EEG-Novelle in Vorbereitung",
+        "description": "Die geplanten Änderungen sollen Teil einer EEG-Novelle werden. 2024 werden die Ausschüttungen für erneuerbare Energien auf ca. 20 Milliarden Euro geschätzt.",
+        "url": "src/img/Solarpanel-b6efa41182ce8cc0.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "artikelLink": "https://www.heise.de/news/Amazon-verschiebt-verbesserte-Alexa-offenbar-bis-2025-10001154.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Amazon verschiebt verbesserte Alexa offenbar bis 2025",
+        "url": "src/img/shutterstock_2256238233-dcb7b7fa757fe058.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Neuer Start für „Remarkable Alexa“ erst 2025",
+        "description": "Ursprünglich für Herbst geplant, verzögert sich die verbesserte Alexa nun auf nächstes Jahr. Laut Bloomberg hat Amazon Herausforderungen mit der KI-Performance.",
+        "url": "src/img/shutterstock_2256238233-dcb7b7fa757fe058.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Premium-Funktionen gegen Monatsgebühr",
+        "description": "Die „Remarkable Alexa“ soll natürlicher interagieren können und wird voraussichtlich 5 bis 10 US-Dollar monatlich kosten.",
+        "url": "src/img/shutterstock_2256238233-dcb7b7fa757fe058.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Probleme mit Antwortgeschwindigkeit und 'Halluzinationen'",
+        "description": "Testnutzern fiel auf, dass die neue Alexa oft langsam antwortet und manchmal fehlerhafte Antworten gibt. Smart-Home-Integration bleibt ebenfalls eine Herausforderung.",
+        "url": "src/img/shutterstock_2256238233-dcb7b7fa757fe058.jpeg.webp"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "KI-Modell von Anthropic soll helfen",
+        "description": "Die neue Alexa nutzt Claudes LLM von Anthropic, das schneller antworten kann. Dies ist ein Wechsel von Amazons internem Modell zu externer KI-Unterstützung.",
+        "url": "src/img/shutterstock_2256238233-dcb7b7fa757fe058.jpeg.webp"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "artikelLink": "https://www.heise.de/news/Missing-Link-Wie-ein-Unternehmen-bei-einem-Cyberangriff-die-Kontrolle-verlor-9984869.html?seite=all",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Wie ein Unternehmen bei einem Cyberangriff die Kontrolle verlor",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Buero-03af65dd29327b4d.png"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Der unerwartete Angriff",
+        "description": "Hacker marschieren mitten am Tag in die Firma ein.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Empfang-df978a8943d44a0b.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Das Vertrauen in die Sicherheit",
+        "description": "Wie das Unternehmen auf einen physischen Angriff unvorbereitet war.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Teekueche-b28c990e4d649365.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Die Nachstellung",
+        "description": "Der White-Hat-Hacker demonstriert die Sicherheitslücken.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Buero-0492fa6e90fce9c7.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "title": "Eindringlinge in der Produktionshalle",
+        "description": "Wie die Hacker sich unbemerkt Zugang zu sensiblen Daten verschaffen.",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Hotel-1f3eaa759be85468.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610"
       }
     ]
   }
-  
 ]

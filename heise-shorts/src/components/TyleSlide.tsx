@@ -20,7 +20,7 @@ export default function TyleSlide({ url, headline }: TyleSlideProps) {
         style={{ backgroundImage: `url(${url})` }}
       >
         <div className="bg-gradient-to-t from-black bg-opacity-80 h-4/6 w-full rounded-xl flex items-end">
-          <div className=" text-l font-bold m-2">{headline}</div>
+          <div className="font-bold m-2 text-xxs sm:text-xxs md:text-xs lg:text-sm xl:text-base 2xl:text-lg">{headline}</div>
         </div>
       </div>
     </>

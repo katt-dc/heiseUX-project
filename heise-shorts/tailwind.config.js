@@ -29,6 +29,9 @@ export default {
         fontSize:{
           'xxs': '0.6rem'
         },
+        aspectRatio:{
+          'shorts' : '5 / 9;'
+        },
         fontFamily:{
           'inria-serif': ['"Inria Serif"', 'serif'],
           'inter': ['Inter', 'sans-serif'],
@@ -73,6 +76,13 @@ export default {
           slideIn: 'slideIn 0.3s ease-out forwards',
           fadeIn: 'fadeIn 0.3s ease-out forwards'
         }
+    },
+    screens: {
+      'sm': '440px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl':'1536px'
     },
     plugins: [
       

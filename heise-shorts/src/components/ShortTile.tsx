@@ -29,7 +29,7 @@ function ShortTile({ slide, shortId }: ShortTyleProps) {
     (currentSlide as TyleSlideData).url;
   return (
     <Link
-      className="flex items-center justify-center rounded-xl bg-heise-light-grey w-[25vh] h-[45vh] relative"
+      className="flex items-center justify-center rounded-xl bg-heise-light-grey aspect-shorts w-24 sm:w-[11vw] relative"
       to={"/shorts"}
       state={{ from: shortId }}
     >

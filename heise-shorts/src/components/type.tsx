@@ -14,6 +14,7 @@ export enum SlideType {
 export interface SlideData {
   duration: number;
   isSlideType(type: SlideType): boolean;
+  setDuration(duration: number): void;
 }
 
 export class ImageSlideData implements SlideData {
@@ -25,6 +26,9 @@ export class ImageSlideData implements SlideData {
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
@@ -45,10 +49,13 @@ export class TextSlideData implements SlideData {
     this.description = description;
     this.duration = duration || 5;
     this.url = url || "";
-    this.textsize = textsize || "base";
+    this.textsize = textsize || "2xl";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.TEXT;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
@@ -63,6 +70,9 @@ export class FullScreenImageSlideData implements SlideData {
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE_FULLSCREEN;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
@@ -85,11 +95,14 @@ export class FullScreenImageWithTextSlideData implements SlideData {
     this.title = title;
     this.description = description;
     this.duration = duration || 5;
-    this.textsize = textsize || "base";
+    this.textsize = textsize || "2xl";
     this.boxposition = boxposition || "center";
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.TEXT_IMAGE;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 export class VideoSlideData implements SlideData {
@@ -111,7 +124,7 @@ export class VideoSlideData implements SlideData {
     this.title = title;
     this.description = description;
     this.duration = duration || 5;
-    this.textsize = textsize || "base";
+    this.textsize = textsize || "2xl";
     this.boxposition = boxposition || "center";
   }
   isSlideType(type: SlideType): boolean {
@@ -145,6 +158,9 @@ export class PodcastSlideData implements SlideData {
   isSlideType(type: SlideType): boolean {
     return type === SlideType.PODCAST;
   }
+  setDuration(duration: number) {
+    this.duration = duration;
+  }
 }
 
 export class AdSlideData implements SlideData {
@@ -172,6 +188,9 @@ export class AdSlideData implements SlideData {
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.AD;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
@@ -202,6 +221,9 @@ export class ComplexAdSlideData implements SlideData {
   isSlideType(type: SlideType): boolean {
     return type === SlideType.AD_COMPLEX;
   }
+  setDuration(duration: number) {
+    this.duration = duration;
+  }
 }
 
 export class TyleSlideData implements SlideData {
@@ -217,6 +239,9 @@ export class TyleSlideData implements SlideData {
   }
   isSlideType(type: SlideType): boolean {
     return type === SlideType.IMAGE_FULLSCREEN;
+  }
+  setDuration(duration: number) {
+    this.duration = duration;
   }
 }
 
