@@ -1,0 +1,732 @@
+[
+  {
+    "id": 1,
+  "artikelLink": "https://www.heise.de/news/Noyb-gegen-X-Illegales-Datensammeln-fuer-KI-Training-9833149.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Datenskandal bei X: Elon Musks geheime KI-Datensammlung enthüllt!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/5/0/5/8/1/shutterstock_1514696930-c91ba5c6a32c3104.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "60 Millionen Europäer ohne Zustimmung: X sammelt im großen Stil Nutzerdaten für KI-Training – Datenschützer schlagen Alarm!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/5/0/5/8/1/shutterstock_1514696930-c91ba5c6a32c3104.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Datenskandal bei X: Elon Musks geheime KI-Datensammlung enthüllt!",
+            "description": "Noyb deckt auf: X nutzt Nutzerdaten ohne Einwilligung. Gerichtsverfahren läuft – Datenschützer fordern Konsequenzen!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/5/0/5/8/1/shutterstock_1514696930-c91ba5c6a32c3104.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  }, 
+  {
+    "id": 2,
+    "artikelLink": "https://www.heise.de/news/Perseverance-Rover-der-NASA-legt-raetselhaften-gruenen-Fleck-auf-dem-Mars-frei-10002342.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Grüner Fleck auf dem Mars: Ein Rätsel, das die NASA-Forscher verzaubert! 🚀", 
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/7/0/Mars-Gruener-Fleck-1d96c36438189060.png"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Fünf Zentimeter großes Geheimnis: Wo kommt der grüne Fleck her, der Wissenschaftler rätseln lässt?",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/7/0/Mars-Gruener-Fleck-1d96c36438189060.png"
+        },
+        {
+            "type": "TEXT",
+            "title": "Grüner Fleck auf dem Mars: Ein Rätsel, das die NASA-Forscher verzaubert!",
+            "description": "Auf der Erde entstehen solche Flecken durch Wasser - könnte dies ein Hinweis auf verborgenes Leben sein?",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/0/0/2/7/0/Mars-Gruener-Fleck-1d96c36438189060.png"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 3,
+    "artikelLink": "https://www.heise.de/news/ChatGPTs-Suche-ist-fertig-10002284.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "KI-Suche Revolution: ChatGPT schlägt Google!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/8/9/7/4/5/chinese-chatbot-2f2d94b2fdf28c72.png"
+        },
+        {
+            "type": "TEXT_IMAGE", 
+            "description": "Neue KI-Suche greift auf 10+ Nachrichtenquellen zu - von Associated Press bis Reuters",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/8/9/7/4/5/chinese-chatbot-2f2d94b2fdf28c72.png"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Nur für Plus & Team: Neue Such-Integration direkt im Chatbot",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/8/9/7/4/5/chinese-chatbot-2f2d94b2fdf28c72.png"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 4,
+    "artikelLink": "https://www.heise.de/news/Atlas-ist-zurueck-Boston-Dynamics-zeigt-neuen-humanoiden-Roboter-9688922.html",
+    "slides": [
+      {
+        "type": "VIDEO",
+        "title": "",
+        "url": "src/img/heiseArtikel09Video.mp4"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "description": "Hydraulik war gestern: Neuer Atlas mit elektrischen Aktuatoren ist leiser, effizienter und wendiger.",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/5/7/4/6/4/9/Neuer_Atlas-3bc4bc6133c971f8.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Revolution der Robotik: Atlas ist zurück und elektrisch!",
+        "description": "360-Grad-Beweglichkeit und KI-Lernen machen Atlas zum Arbeitsroboter der Zukunft.",
+        "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/5/7/4/6/4/9/Neuer_Atlas-3bc4bc6133c971f8.jpeg"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 5,
+    "artikelLink": "https://www.heise.de/ratgeber/Apples-Wie-die-Airpods-Pro-2-beim-Hoeren-helfen-9999835.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "AirPods Pro 2: Deine Ohren verdienen Schutz! 🦻",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/fotos_airpods_pro_2nd_gen_hero-94a1115c5db5f5d8.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "iOS 18.1 verwandelt AirPods Pro 2 in smarte Hörhilfen: Gehör vermessen, Klang anpassen, Konzert-Schutz.",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/fotos_airpods_pro_2nd_gen_hero-94a1115c5db5f5d8.jpeg"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Konzert-Modus: Musik erleben, Ohren schonen - bis zu 30 Dezibel Lärmreduktion!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/fotos_airpods_pro_2nd_gen_hero-94a1115c5db5f5d8.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "AirPods Pro 2: Deine Ohren verdienen Schutz! 🦻",
+            "description": "Ab 240€ - smarter Gehörschutz statt teurer Hörgeräte. iOS 18.1 macht Kopfhörer zur Hörhilfe!",
+            "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/8/9/8/3/einstellung_airpods-647afce90fb1a40d.jpg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 6,
+    "artikelLink": "https://www.heise.de/news/Meta-oeffnet-Threads-API-fuer-Entwickler-9769925.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Threads öffnet die Tore: Meta launcht API für Entwickler!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/7/4/1/0/shutterstock_2328036025-d599f7d5aef7f452.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Social-Media-Profis aufgepasst: Jetzt könnt ihr Threads-Beiträge zentral managen und Performance tracken!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/7/4/1/0/shutterstock_2328036025-d599f7d5aef7f452.jpeg",
+            "textsize": "3xl"
+        },
+        {
+            "type": "TEXT",
+            "title": "Threads öffnet die Tore: Meta launcht API für Entwickler!",
+            "description": "Beiträge veröffentlichen, Statistiken analysieren, Communitys managen - alles über eine Schnittstelle!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/7/4/1/0/shutterstock_2328036025-d599f7d5aef7f452.jpeg",
+            "textsize": "3xl"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 7,
+    "artikelLink": "https://www.heise.de/news/KI-Update-kompakt-Snap-Spectacles-Google-GPT-4o-Image-Playground-9999499.html",
+    "slides": [
+      {
+        "type": "PODCAST",
+        "title": "KI-Update kompakt: Snap Spectacles, Google, GPT-4o, Image Playground",
+        "imageUrl": "./src/img/podcast_cover.png",
+        "audioUrl": "https://audio.podigee-cdn.net/1652699-m-ef93260f8ca0cd5f072193cec65513ff.mp3?source=webplayer",
+        "description": "Snap Spectacles starten in Deutschland, Google wächst mit KI, Gemma 2 für Japan, GPT-4 zählt ungenau, GitHub Copilot bringt Modellauswahl."
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 8,
+    "artikelLink": "https://www.heise.de/blog/Meinung-Softwareentwicklung-ist-keine-Kunst-9755000.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Code: Kunst oder Handwerk? Eine Reise zwischen Kreativität und Effizienz 🖥️",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/0/9/5/5/0/OVERLAY_KOMMENTAR_Kopie-172b853274014082.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Donald E. Knuth fragte: Wann haben Sie zuletzt genüsslich Code vor dem Kamin gelesen?",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/0/9/5/5/0/OVERLAY_KOMMENTAR_Kopie-172b853274014082.jpeg"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "70.000 Zeilen PHP in EINER Datei - Wahnsinn oder geniales Pragmatismus?",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/0/9/5/5/0/OVERLAY_KOMMENTAR_Kopie-172b853274014082.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Code: Kunst oder Handwerk? Eine Reise zwischen Kreativität und Effizienz",
+            "description": "Softwareentwicklung ist eine Dualität: Zwischen künstlerischer Vision und businessorientierter Problemlösung.",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/0/9/5/5/0/OVERLAY_KOMMENTAR_Kopie-172b853274014082.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 9,
+    "artikelLink": "https://www.heise.de/news/Apple-verweist-auf-neue-Regeln-vorerst-keine-Apple-Intelligence-fuer-EU-iPhones-9774039.html",
+    "slides": [
+      {
+        "type": "PODCAST",
+        "title": "Apple Intelligence, iOS 18 & Co: Erste Analyse der WWDC 2024",
+        "imageUrl": "src/img/podcast_cover_MacAndI.png",
+        "audioUrl": "https://adswizz.podigee-cdn.net/media/podcast_28908_mac_i_der_apple_pdcst_episode_1498661_apple_intelligence_ios_18_co_erste_analyse_der_wwdc_2024.mp3?awCollectionId=heise_db3ddb&awEpisodeId=1498661&source=webplayer&v=1718197925",
+        "description": "Episode 74: Apple Intelligence – KI lokal und auf Servern. Datenschutz, iPadOS-Updates und Mischmodell im Fokus."
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 10,
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "slides": [
+      {
+        "type": "AD_COMPLEX",
+        "title": "Exklusives Angebot in Kooperation mit Heise Online",
+        "description": "Lesen Sie 3 Monate kostenlos F.A.Z PRO D:ECONOMY inklusive unbegrenztem Zugriff zu FAZ+",
+        "images": [
+          "src/img/header.png",
+          "src/img/frankfurter.png",
+          "src/img/price1.png"
+        ],
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select"
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 11,
+    "artikelLink": "https://www.heise.de/ratgeber/12-Tipps-Apple-Intelligence-in-Deutschland-aktivieren-und-nutzen-9989656.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Apple Intelligence: Die KI-Revolution für iPhone & Mac ist da! 🚀",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/mi_5_24_aufmacher_tipps_neue_systeme_ai_a_digital-35e44838acf6bd9f.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Achtung: Nur auf Englisch und mit Workaround in der EU nutzbar - komplizierter Start für deutsche Nutzer",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/9/5/3/9/IMG_3904-144dd8a25894b530.jpeg"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Writing Tools: KI korrigiert, fasst zusammen und optimiert Texte in allen Apps",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/8/8/7/0/8/Apple-Logo-2_tre-9a330cf07064b49e.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Apple Intelligence: Die KI-Revolution für iPhone & Mac ist da! 🚀",
+            "description": "Deutsche Nutzer müssen bis 2025 auf Vollunterstützung warten",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/3/6/5/3/mi_5_24_aufmacher_tipps_neue_systeme_ai_a_digital-35e44838acf6bd9f.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },  
+  {
+    "id": 12,
+    "artikelLink": "https://www.heise.de/hintergrund/Die-kleine-Codefabrik-KI-Tools-fuer-Entwickler-im-Ueberblick-9758025.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "KI-Revolution: Deine Coding-Produktivität auf Turbo 🚀",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/1/1/4/4/t4_digital-863d243fe27890a4.png"
+        },
+        {
+            "type": "TEXT_IMAGE", 
+            "description": "KI-Assistenten schreiben Code, dokumentieren und refaktorisieren - alles in Sekunden!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/1/1/1/4/4/t4_digital-863d243fe27890a4.png"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Vorsicht: Datenschutz-Fallen! Nicht jeder KI-Assistent schützt deinen Code",
+            "url": ""
+        },
+        {
+            "type": "TEXT",
+            "title": "KI-Revolution: Deine Coding-Produktivität auf Turbo 🚀",
+            "description": "Top-Tools wie GitHub Copilot und Amazon Q Developer revolutionieren deine Entwicklungsarbeit - aber Vorsicht bei Datenschutz!",
+            "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/1/1/1/4/4/amazon2-cc9178a8b3d56f23.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=1220"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+
+  {
+    "id": 13,
+    "artikelLink": "https://www.heise.de/api/accountservice/subscribe/plus",
+    "slides": [
+      {
+        "type": "AD_COMPLEX",
+        "images": [
+          "src/img/heiseplus.png",
+          "src/img/heiseplus_img.png",
+          "src/img/price2.png"
+        ],
+        "url": "https://www.heise.de/api/accountservice/subscribe/plus?affiliateId=35870_HP000028_24032_3_0&mag=&wt_mc=intern.abo.plus.hp_up.dmp.banner_select.banner_select",
+        "text": [
+          "Aktionsangebot - Nur bis zum 31. Mai:",
+          "1 Jahr heise+ vergünstigt",
+          "Nach einem Jahr Laufzeit jederzeit zum Monatsende kündbar."
+        ]
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 14,
+    "artikelLink": "https://www.heise.de/news/Microsoft-Supportverlaengerung-fuer-Windows-10-auch-fuer-Privatanwender-10001194.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Windows 10: Deine Rettungsleine für alte Rechner kommt! 🖥️",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/8/1/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE", 
+            "description": "Microsoft überrascht: Erstmals können Privatnutzer Windows 10 gegen 30 Dollar pro Jahr verlängern - Sicherheit inklusive!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/8/1/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Windows 10: Deine Rettungsleine für alte Rechner kommt!",
+            "description": "Support endet Oktober 2025 - Ohne Updates drohen Sicherheitsrisiken. Jetzt die Rettungsoption für 30 Dollar sichern!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/8/1/2024-09-27-Bing_Image_Creator-Windows_Update_4-da8fee0531c1eebe.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 15,
+    "artikelLink": "https://www.heise.de/news/Studie-Koennen-Menschen-fuer-Roboter-Mitleid-empfinden-9997820.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Roboter und Mitleid: Wenn Maschinen unsere Gefühle hacken! 🤖",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/9/3/4/shutterstock_1071703310-d07d54f496b2e0ef.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE", 
+            "description": "Wissenschaftler zeigen: Ein Roboter, der wimmert, lässt Menschen schnell Mitleid empfinden.",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/9/3/4/shutterstock_1071703310-d07d54f496b2e0ef.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Roboter und Mitleid: Wenn Maschinen Emotionen hacken!",
+            "description": "Studie enthüllt: Roboter können Menschen durch Emotionsdarstellung manipulieren – ähnlich wie Tamagotchis in den 90ern.",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/9/3/4/shutterstock_1071703310-d07d54f496b2e0ef.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 16,
+    "artikelLink": "https://www.heise.de/news/PHP-8-4-steht-vor-der-Tuer-Noch-Fruehbuchertickets-fuer-betterCode-PHP-sichern-9996570.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "PHP-Revolution: Alles, was Entwickler 2024 wissen müssen! 🚀",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/2/8/6/bcc-php-b7334515999a68bc.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "PHP 8.4 kommt: Release-Managerin Saki Takamachi enthüllt die spannendsten Neuerungen der Programmiersprache.",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/2/8/6/bcc-php-b7334515999a68bc.jpeg"
+        },
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Time Travel in Software? Arne Blankerts zeigt, wie PHP-Code durch die Zeit reisen kann!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/2/8/6/bcc-php-b7334515999a68bc.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "PHP-Revolution: Alles, was Entwickler 2024 wissen müssen! 🚀",
+            "description": "Noch bis 6. November Frühbucherrabatt: betterCode() PHP bringt Insider-Wissen zu PHP 8.4, Testing und Performance!",
+            "url": "https://heise.cloudimg.io/width/1220/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/2/8/6/bcc-php-b7334515999a68bc.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 17,
+    "artikelLink": "https://www.heise.de/news/Deutscher-Spielemarkt-schrumpft-um-6-Prozent-9756321.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Spielemarkt-Schock: Warum der Gaming-Boom plötzlich stoppt!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/5/1/1/2/3/shutterstock_2047435856-ff75bd9b61e7546a.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Konsolen-Absatz bricht ein: Weniger Blockbuster und gesättigter Markt lassen Umsätze um 6 Prozent purzeln!",
+            "url": ""
+        },
+        {
+            "type": "TEXT",
+            "title": "Spielemarkt-Schock: Warum der Gaming-Boom plötzlich stoppt!",
+            "description": "Mobile Games retten die Bilanz: Trotz Rückgang bei Konsolen bleibt der Markt mit Handyspielen stark und dynamisch.",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/5/1/1/2/3/shutterstock_2047435856-ff75bd9b61e7546a.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 18,
+   "artikelLink": "https://www.heise.de/news/Amazon-mit-deutlich-hoeheren-Gewinnen-KI-Investitionen-in-Milliardenhoehe-10001033.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Amazon explodiert: 11% Umsatzwachstum trotz Sparkurs!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/5/9/8/shutterstock_1434219221-90bb3c8149821ab0.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "KI-Offensive: Amazon pumpt 22,6 Milliarden Dollar in Rechenzentren – das ist ein irrer Wachstumssprung von 81%!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/5/9/8/shutterstock_1434219221-90bb3c8149821ab0.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Amazon explodiert: 11% Umsatzwachstum trotz Sparkurs!",
+            "description": "Cloud und Werbung wachsen rasant. Mit 75 Milliarden Dollar KI-Investitionen für 2024 schießt Amazon den Turbo-Modus an.",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/5/9/8/shutterstock_1434219221-90bb3c8149821ab0.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 19,
+    "artikelLink": "https://www.heise.de/news/AKW-Grafenrheinfeld-Sprengung-der-Kuehltuerme-steht-bevor-9831504.html",
+     "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Atomkraftwerk im Zeitraffer: Wenn Riesen in sich zusammenfallen!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/4/9/7/0/1/pe-e014c0a2a5b6a9a3.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Präzisions-Sprengung mit Ansage: Zwei Kühltürme fallen kontrolliert – Sicherheit und Spektakel garantiert!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/4/9/7/0/1/pe-e014c0a2a5b6a9a3.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Atomkraftwerk im Zeitraffer: Wenn Riesen in sich zusammenfallen!",
+            "description": "Ein Kraftwerk verschwindet: Nach 333.000 GWh Stromproduktion macht Grafenrheinfeld Platz für eine neue Energiezukunft.",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/4/9/7/0/1/pe-e014c0a2a5b6a9a3.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 20,
+    "artikelLink": "https://www.heise.de/news/Solarstrom-Regierung-will-Ueberschussfoerderung-stoppen-9997130.html",
+   "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN", 
+            "title": "Solarstrom-Revolution: Wie die Regierung das Energie-Spiel neu erfindet!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/5/7/6/Solarpanel-b6efa41182ce8cc0.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Schluss mit Subventionen ohne Sinn: Nur noch Solarstrom, der wirklich gebraucht wird, kassiert Geld!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/5/7/6/Solarpanel-b6efa41182ce8cc0.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Solarstrom-Revolution: Wie die Regierung das Energie-Spiel neu erfindet!",
+            "description": "Ab 2028 nur noch kleine Anlagen gefördert - Solarpflicht kommt, Stromnetze werden entlastet und Speicher werden zum Goldesel.",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/7/5/7/6/Solarpanel-b6efa41182ce8cc0.jpeg"
+        },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 21,
+    "artikelLink": "https://www.heise.de/news/Amazon-verschiebt-verbesserte-Alexa-offenbar-bis-2025-10001154.html",
+    "slides": [
+      {
+          "type": "IMAGE_FULLSCREEN",
+          "title": "Amazons Alexa-Revolution: Warum der KI-Assistent bis 2025 auf sich warten lässt!",
+          "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/6/1/shutterstock_2256238233-dcb7b7fa757fe058.jpeg"
+      },
+      {
+          "type": "TEXT_IMAGE",
+          "description": "Große Überraschung: Amazon setzt auf Claude statt eigener KI – Die Alexa-Zukunft wird komplexer als gedacht!",
+          "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/6/1/shutterstock_2256238233-dcb7b7fa757fe058.jpeg"
+      },
+      {
+          "type": "TEXT",
+          "title": "Amazons Alexa-Revolution: Warum der KI-Assistent bis 2025 auf sich warten lässt!",
+          "description": "Premium-Version mit Monatsgebühr kommt – Amazon kämpft gegen KI-Halluzinationen und langsame Antworten an.",
+          "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/9/6/6/1/shutterstock_2256238233-dcb7b7fa757fe058.jpeg"
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 22,
+    "artikelLink": "https://www.heise.de/news/Missing-Link-Wie-ein-Unternehmen-bei-einem-Cyberangriff-die-Kontrolle-verlor-9984869.html?seite=all",
+    "slides": [
+      {
+          "type": "IMAGE_FULLSCREEN",
+          "title": "Wie Hacker ein Unternehmen in 60 Minuten komplett übernahmen",
+          "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Empfang-df978a8943d44a0b.png"
+      },
+      {
+          "type": "TEXT_IMAGE",
+          "description": "Kein Hack per Computer: Drei Hacker marschieren einfach ins Büro – und niemand hält sie auf!",
+          "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Buero-03af65dd29327b4d.png"
+      },
+      {
+          "type": "TEXT",
+          "title": "Wie Hacker ein Unternehmen in 60 Minuten komplett übernahmen",
+          "description": "Offene Türen, naive Mitarbeiter, ungesicherte Rechner: So einfach kann Cyberkriminalität aussehen – und jeden treffen.",
+          "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/6/9/1/1/2/9/Teekueche-b28c990e4d649365.png"
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 23,
+    "artikelLink": "https://www.heise.de/news/Naturschutz-Kamerafallen-zum-Tigerschutz-als-Gefahr-fuer-Frauen-in-Nordindien-10181129.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Technik mit dunkler Seite: Wie Wildtierschutz Frauen in Gefahr bringt",
+            "url": "src/img/heiseArtikel25.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Schockierend: Kamerafallen im Wald werden zur Werkzeug der Einschüchterung statt zum Tierschutz",
+            "url": "src/img/heiseArtikel25.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Technik mit dunkler Seite: Wie Wildtierschutz Frauen in Gefahr bringt",
+            "description": "Cambridge-Studie enthüllt: Technologie zum Tierschutz wird gezielt missbraucht, um Frauen in indischen Dörfern zu überwachen und zu bedrohen.",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/6/4/4/Bengal_Tiger_looking_at_us_in_Jim_Corbett_National_Park-f41585673810fb8d.jpeg"
+        },
+        {"type": "REVIEW"}
+      ]
+  },
+  {
+    "id": 24,
+    "artikelLink": "https://www.heise.de/news/Hochriskante-Sicherheitsluecke-in-PostgreSQL-Gitlab-patcht-noch-nicht-10181730.html",
+    "slides": [
+        {
+            "type": "IMAGE_FULLSCREEN",
+            "title": "Alarmstufe Rot: Hacker haben leichtes Spiel in PostgreSQL-Datenbanken!",
+            "url": "src/img/heiseArtikel26.jpeg"
+        },
+        {
+            "type": "TEXT_IMAGE",
+            "description": "Sicherheitslücke mit Sprengkraft: Angreifer können ohne Admin-Rechte Systeme komplett übernehmen!",
+            "url": "src/img/heiseArtikel26.jpeg"
+        },
+        {
+            "type": "TEXT",
+            "title": "Alarmstufe Rot: Hacker haben leichtes Spiel in PostgreSQL-Datenbanken!",
+            "description": "GitLab zögert bei kritischen Sicherheits-Updates – Nutzer sind akut gefährdet. Sofortiges Handeln dringend empfohlen!",
+            "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/9/5/5/shutterstock_782150845-0c5abd2261a0187c.jpeg"
+        },
+        {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 25,
+    "artikelLink": "https://www.heise.de/news/Astronomie-Milchstrasse-ist-ein-Ausreisser-unter-aehnlichen-Galaxien-10178637.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Die Milchstraße: Ein kosmischer Sonderling?",
+        "url": "src/img/heiseArtikel27.jpeg"
+      },
+      {
+        "type": "TEXT_IMAGE",
+        "description": "Unsere Galaxie hat eine ungewöhnliche Entwicklung im Vergleich zu anderen.",
+        "url": "src/img/heiseArtikel27.jpeg"
+      },
+      {
+        "type": "TEXT",
+        "title": "Die Milchstraße: Ein kosmischer Sonderling?",
+        "description": "Mit nur 4 Satellitengalaxien und ohne aktive Sternentstehung ist die Milchstraße ein Ausreißer unter ähnlichen Galaxien.",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/2/3/4/3/saga-satellite-mosaic-9da83e0e4b599d20.jpeg"
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 26,
+    "artikelLink": "https://www.heise.de/news/QR-Codes-an-Parkautomaten-Polizei-warnt-vor-Betrugsmasche-10181611.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Vorsicht Falle: Kriminelle Hacker manipulieren harmlos aussehende QR-Codes!",
+        "url": "src/img/heiseArtikel28.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "2.000 Euro weg in Sekunden: Betrüger übekleben Parkautomaten mit gefälschten QR-Codes und locken Opfer in Fake-Websites!",
+        "url": "src/img/heiseArtikel28.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Vorsicht Falle: Kriminelle Hacker manipulieren harmlos aussehende QR-Codes!",
+        "description": "Nicht jeden QR-Code scannen! Echte Apps führen direkt zur App oder in den App-Store – niemals zu Websites mit Eingabefeldern.",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/8/9/2/shutterstock_1716378049-3f7840e6c234aebd.jpeg"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 27,
+    "artikelLink": "https://www.heise.de/news/Kritik-an-OpenAI-Kunstschaffende-geben-Zugang-zu-Video-KI-Sora-fuer-alle-frei-10177944.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Rebellion der Kreativen: Wie Künstler OpenAI herausfordern!",
+        "url": "src/img/heiseArtikel29.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "Sora-Zugang für alle: Künstler hacken OpenAI und entlarven deren PR-Strategie des 'Art Washing'!",
+        "url": "src/img/heiseArtikel29.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Rebellion der Kreativen: Wie Künstler OpenAI herausfordern!",
+        "description": "20 Kreative öffnen Sora für alle – OpenAI sperrt prompt den Zugang. Der Kampf um Künstlerrechte in der KI-Ära eskaliert!",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/1/9/8/5/Screenshot_2024-11-27_at_08-41-48_Ships_in_coffee_on_Vimeo-fd4f8de151c8e185.png"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 28,
+    "artikelLink": "https://www.heise.de/news/No-Man-s-Sky-Acht-Jahre-nach-vergeigtem-Start-auf-Steam-endlich-sehr-positiv-10181313.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Von Flop zu Top: Wie No Man's Sky die Gaming-Welt eroberte!",
+        "url": "src/img/heiseArtikel30.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "8 Jahre Ausdauer: Hello Games verwandelte den größten Gaming-Flop in ein Meisterwerk der Spielegeschichte!",
+        "url": "src/img/heiseArtikel30.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Von Flop zu Top: Wie No Man's Sky die Gaming-Welt eroberte!",
+        "description": "245.000 Steam-Bewertungen sprechen Klartext: Kostenlose Updates machten aus dem Hoffnungsfall ein Kultspiel der Extraklasse!",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/7/4/0/ss_cc758ee41158374376640b1ae6801eb6cca6babe-f7ee6ad9a78dd016.jpeg"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 29,
+    "artikelLink": "https://www.heise.de/hintergrund/Auslegungssache-123-Neue-Dimensionen-der-Mitarbeiterueberwachung-10181275.html",
+    "slides": [
+      {
+        "type": "PODCAST",
+        "title": "Auslegungssache 123: Neue Dimensionen der Mitarbeiterüberwachung",
+        "imageUrl": "https://heise.cloudimg.io/width/1392/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/7/2/0/pas123_teaser-efd33917ae5d5510.png",
+        "audioUrl": "https://audio.podigee-cdn.net/1694750-m-34fc5b8608dc845b990b22fdb86e3c92.mp3?source=webplayer",
+        "description": "Warnung: Microsoft-Tools fördern Mitarbeiterüberwachung – Datenschutz in Gefahr!"
+      },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 30,
+    "artikelLink": "https://www.heise.de/news/TikTok-sucht-laut-Bericht-Naehe-zu-Musk-um-Verbot-in-den-USA-abzuwenden-10148070.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "TikTok am Abgrund: Rettet Elon Musk den Social-Media-Giganten?",
+        "url": "src/img/heiseArtikel32.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "Geheime Gespräche: TikTok-CEO Chew trifft Musk – Ein Rettungsplan gegen das drohende US-Verbot nimmt Form an!",
+        "url": "src/img/heiseArtikel32.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "TikTok am Abgrund: Rettet Elon Musk den Social-Media-Giganten?",
+        "description": "Dezember wird zur Schicksalswoche: Bundesgericht entscheidet über TikToks Zukunft. Trump und Musk im Hintergrund.",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/4/4/1/6/5/shutterstock_2256108043-103527654d19bb0a.jpeg"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 31,
+    "artikelLink": "https://www.heise.de/news/Uganda-Cyberkriminelle-stehlen-der-Zentralbank-16-Millionen-Euro-10180152.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Cybercrime-Wahnsinn: Hacker klauen 16 Millionen Euro von Ugandas Zentralbank!",
+        "url": "src/img/heiseArtikel33.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "Mysteröse Bande namens 'Waste' schlägt zu: Mehr als die Hälfte des Geldes bereits zurückgeholt!",
+        "url": "src/img/heiseArtikel33.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Cybercrime-Wahnsinn: Hacker klauen 16 Millionen Euro von Ugandas Zentralbank!",
+        "description": "Staatspräsident persönlich eingeschaltet: Ermittlungen laufen, Insider-Hilfe vermutet. Ein Krimi mit Cyberkrimi-Dramatik!",
+        "url": "https://heise.cloudimg.io/width/610/q70.png-lossy-70.webp-lossy-70.foil1/_www-heise-de_/imgs/18/4/7/5/3/1/3/6/shutterstock_2206630585-d27fbd6b9ed0ca56.jpeg"
+    },
+      {"type": "REVIEW"}
+    ]
+  },
+  {
+    "id": 32,
+    "artikelLink": "https://www.heise.de/news/Amazon-tritt-auf-die-Bremse-Laengere-Lieferzeit-gegen-Mini-Rabatt-10181212.html",
+    "slides": [
+      {
+        "type": "IMAGE_FULLSCREEN",
+        "title": "Amazon dreht den Rabatt-Trick: Warten als Geschäftsmodell?!",
+        "url": "src/img/heiseArtikel34_1.jpeg"
+    },
+    {
+        "type": "TEXT_IMAGE",
+        "description": "Unglaublich: Prime-Kunden können jetzt 8 Tage warten - und kassieren dafür satte 1% Rabatt!",
+        "url": "src/img/heiseArtikel34_1.jpeg"
+    },
+    {
+        "type": "TEXT",
+        "title": "Amazon dreht den Rabatt-Trick: Warten als Geschäftsmodell?!",
+        "description": "Achtung Schnäppchenjäger: Der Rabatt gilt nur für ausgewählte Produkte. Lohnt sich das Warten wirklich?",
+        "url": "https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/4/7/5/3/6/8/7/Bildschirmfoto_2024-11-28_um_17.25.37-fe37e0672c0d9561.png?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=70&width=750"
+    },
+      {"type": "REVIEW"}
+    ]
+  }
+
+]

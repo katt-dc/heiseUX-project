@@ -1,0 +1,24 @@
+.info-icon-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .info-icon-image {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .info-box-image {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50.00vw;
+    max-width: 800px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+  }

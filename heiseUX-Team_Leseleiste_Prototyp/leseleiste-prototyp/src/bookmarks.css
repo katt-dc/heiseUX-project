@@ -1,0 +1,241 @@
+.bookmarks-container {
+  position: absolute;
+  top: 50px;
+  left: 62%;
+  transform: translateX(-50%);
+  background-color: #2c2c2c;
+  z-index: 5; /* Bookmarks sollen über dem Text angezeigt werden */
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+  width: auto;
+  transition: left 0.5s ease, right 0.5s ease;
+}
+
+@media (max-width: 2400px) {
+  .bookmarks-container {
+    left: 64%;
+  }
+}
+
+@media (max-width: 200px) {
+  .bookmarks-container {
+    left: 66%;
+  }
+}
+
+@media (max-width: 2000px) {
+  .bookmarks-container {
+    left: 68%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .bookmarks-container {
+    left: 70%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .bookmarks-container {
+    left: 75%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bookmarks-container {
+    left: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bookmarks-container {
+    left: 70%;
+  }
+}
+
+.bookmarks-header {
+  display: flex;
+  align-items: center;
+}
+
+.info-icon-container.bookmarkbar {
+  margin-right: 10px;
+}
+
+.bookmarks-toggle,
+.bookmark-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  z-index: 5;
+}
+
+.bookmark-button {
+  background-color: #28a745;
+}
+
+.bookmarks-list {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 600px;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.bookmark-item {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 0px;
+  background-color: #3c3c3c;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  color: white;
+  position: relative;
+  text-align: justify;
+}
+
+.bookmark-item h3 {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.bookmark-item .back-link {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background-color: #007bff; /* Blau wie der Text */
+  color: white; /* Textfarbe */
+  border: none; /* Keine Umrandung */
+  border-radius: 3px; /* Abgerundete Ecken */
+  padding: 5px 5px; /* Innenabstand */
+  cursor: pointer;
+  text-decoration: none; /* Entfernt Unterstreichung */
+  font-size: 16px; /* Schriftgröße */
+  font-weight: bold; /* Fette Schrift */
+}
+
+.bookmark-item .delete-link {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 16px;
+  background-color: red;
+  color: white; /* Textfarbe */
+  border: none; /* Keine Umrandung */
+  border-radius: 3px; /* Abgerundete Ecken */
+  padding: 2px 5px; /* Innenabstand */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.action-icon {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bookmark-item .edit-link {
+  color: rgb(247, 246, 248);
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.highlighted {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.focused {
+  background-color: rgba(118, 118, 118, 255);
+  color: black;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #2c2c2c;
+  border: 2px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.bookmark-name-input {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.bookmark-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bookmark-item.editing {
+  background-color: #f0f8ff; /* Heller Hintergrund im Editiermodus */
+  border: 2px solid #007bff; /* Blauer Rand im Editiermodus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Leichter Schlagschatten für mehr Fokus */
+  transition: all 0.3s ease; /* Sanfte Übergänge */
+}
+
+.edit-mode {
+  background-color: rgba(0, 0, 255, 0.1);
+  outline: 5px solid rgb(29, 178, 236); /* Blaue Umrandung */
+  outline-offset: -5px; /* Optional, um den Rand anzupassen */
+  opacity: 0.8;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    outline-color: rgb(72, 145, 212);
+  }
+  50% {
+    outline-color: lightblue;
+  }
+}
